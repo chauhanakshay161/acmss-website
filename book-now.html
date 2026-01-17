@@ -1,36 +1,17 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book Now | AC Manufacturing Solutions</title>
-  <meta name="description" content="Book an introductory call with AC Manufacturing Solutions." />
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; line-height:1.5}
-    header{padding:28px 18px; background:#0b0f14; color:#fff}
-    nav a{color:#fff; text-decoration:none; margin-right:14px; opacity:.9}
-    nav a:hover{opacity:1}
-    main{max-width:900px; margin:0 auto; padding:28px 18px}
-    .card{border:1px solid #e6e6e6; border-radius:14px; padding:18px; margin-top:14px}
-    .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:#0b0f14; color:#fff; text-decoration:none}
-    .muted{color:#555}
-    ul{margin:10px 0 0 18px}
-    footer{padding:22px 18px; color:#666}
-  </style>
+  <title>About | AC Manufacturing Solutions</title>
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1 style="margin:0 0 10px;">AC Manufacturing Solutions</h1>
-    <p style="margin:0 0 12px; opacity:.85;">Stabilizing Manufacturing Processes and Unlocking Throughput</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="book-now.html">Book Now</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
+  {% include header.html %}
   <main>
     <div class="card">
       <h2 style="margin-top:0;">Book an Intro Call</h2>
@@ -62,9 +43,7 @@
     </div>
   </main>
 
-  <footer>
-    © <span id="y"></span> AC Manufacturing Solutions
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  </footer>
+  {% include footer.html %}
+
 </body>
 </html>
