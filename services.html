@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | AC Manufacturing Solutions</title>
+  <meta name="description" content="Service options from AC Manufacturing Solutions for stabilizing processes and improving throughput." />
+  <style>
+    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:0; line-height:1.5}
+    header{padding:28px 18px; background:#0b0f14; color:#fff}
+    nav a{color:#fff; text-decoration:none; margin-right:14px; opacity:.9}
+    nav a:hover{opacity:1}
+    main{max-width:1000px; margin:0 auto; padding:28px 18px}
+    .card{border:1px solid #e6e6e6; border-radius:14px; padding:18px; margin-top:14px}
+    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:#0b0f14; color:#fff; text-decoration:none}
+    footer{padding:22px 18px; color:#666}
+    ul{margin:10px 0 0 18px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="margin:0 0 10px;">AC Manufacturing Solutions</h1>
+    <p style="margin:0 0 12px; opacity:.85;">Stabilizing Manufacturing Processes and Unlocking Throughput</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="book-now.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 style="margin-top:0;">Services</h2>
+      <p>
+        Simple, outcome-focused engagements designed to stabilize execution, reduce variability,
+        and improve throughput.
+      </p>
+      <a class="btn" href="book-now.html">Book a call</a>
+    </div>
+
+    <div class="grid" style="margin-top:14px;">
+      <div class="card">
+        <h3 style="margin-top:0;">1) Process Stability Diagnostic</h3>
+        <p>Identify the true constraint and top instability drivers.</p>
+        <ul>
+          <li>Shop-floor observation + data review</li>
+          <li>Issues ranked by impact and effort</li>
+          <li>30-day action plan</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0;">2) Standard Work + Documentation Pack</h3>
+        <p>Turn unclear work into repeatable execution.</p>
+        <ul>
+          <li>SOPs / work instructions / check sheets</li>
+          <li>Setup standardization</li>
+          <li>Quality gates to improve first-pass yield</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0;">3) Bottleneck Removal Sprint</h3>
+        <p>A short sprint to move throughput on the constraint.</p>
+        <ul>
+          <li>Constraint validation</li>
+          <li>Countermeasure design + implementation support</li>
+          <li>Before/after KPI tracking</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Optional add-ons</h3>
+      <ul>
+        <li>Tooling / fixture concepts and basic CAD support</li>
+        <li>Measurement plans and inspection checks</li>
+        <li>Vendor communication packages for quoting and process alignment</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> AC Manufacturing Solutions
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
