@@ -1,18 +1,50 @@
-<a href="{{ '/' | relative_url }}" style="display:inline-flex; align-items:center; gap:12px; text-decoration:none;">
-  <img
-    src="{{ '/assets/images/logo.png' | relative_url }}"
-    alt="AC Manufacturing Solutions logo"
-    style="height:56px; width:auto; background:#ffffff; padding:6px 10px; border-radius:8px;"
-  >
-</a>
 <header>
-  <h1 style="margin:0 0 10px;">AC Manufacturing Solutions </h1>
-  <p style="margin:0 0 12px; opacity:.85;">Stabilizing Manufacturing Processes and Unlocking Throughput</p>
-  <nav>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/about.html' | relative_url }}">About</a>
-    <a href="{{ '/services.html' | relative_url }}">Services</a>
-    <a href="{{ '/book-now.html' | relative_url }}">Book Now</a>
-    <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-  </nav>
+  <div style="
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  ">
+
+    <!-- Logo + Name (single line) -->
+    <a href="{{ '/' | relative_url }}" style="
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:inherit;
+    ">
+      <img
+        src="{{ '/assets/images/logo.png' | relative_url }}"
+        alt="AC Manufacturing Solutions logo"
+        style="
+          height:78px;
+          width:auto;
+          background:#ffffff;
+          padding:6px 10px;
+          border-radius:8px;
+          flex-shrink:0;
+        "
+      >
+      <div style="line-height:1.1;">
+        <h1 style="margin:0; font-size:26px;">
+          AC Manufacturing Solutions
+        </h1>
+        <p style="margin:4px 0 0; opacity:.85; font-size:14px;">
+          Stabilizing Manufacturing Processes and Unlocking Throughput
+        </p>
+      </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about.html' | relative_url }}">About</a>
+      <a href="{{ '/services.html' | relative_url }}">Services</a>
+      <a href="{{ '/book-now.html' | relative_url }}">Book Now</a>
+      <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </nav>
+
+  </div>
 </header>
