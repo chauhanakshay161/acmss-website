@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,68 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AC Manufacturing Solutions</title>
   <meta name="description" content="AC Manufacturing Solutions helps manufacturers stabilize processes and unlock throughput." />
-  <style>
-    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:0; padding:0; line-height:1.5}
-    header{padding:28px 18px; background:#0b0f14; color:#fff}
-    nav a{color:#fff; text-decoration:none; margin-right:14px; opacity:.9}
-    nav a:hover{opacity:1}
-    main{max-width:1000px; margin:0 auto; padding:28px 18px}
-    .card{border:1px solid #e6e6e6; border-radius:14px; padding:18px; margin-top:14px}
-    .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:#0b0f14; color:#fff; text-decoration:none}
-    footer{padding:22px 18px; color:#666}
-  </style>
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1 style="margin:0 0 10px;">AC Manufacturing Solutions</h1>
-    <p style="margin:0 0 12px; opacity:.85;">Stabilizing Manufacturing Processes and Unlocking Throughput</p>
-    <nav>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="book-now.html">Book Now</a>
-  <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+
+  {% include header.html %}
 
   <main>
+    <!-- KEEP YOUR EXISTING HOMEPAGE CONTENT HERE (do not change) -->
+
     <div class="card">
-    <h2 style="margin-top:0;">Structured engagements to stabilize execution and unlock throughput</h2>
-    <p>
-      AC Manufacturing Solutions helps manufacturing and operations leaders improve throughput and process stability by addressing real constraints that exist on the shop floor.
-    </p>
-    <p style="color:#555;">
-      <strong>Important:</strong> These are engagements, not à-la-carte services. CAD, SOPs, and analysis are tools, not the product.
-    </p>
-    <a class="btn" href="book-now.html">Book an intro call</a>
-  </div>
+      <h2 style="margin-top:0;">Hands-on process improvement for small and mid-size manufacturers</h2>
+      <p>
+        I help teams reduce variability, clarify standard work, and remove bottlenecks so output becomes predictable and scalable.
+      </p>
+      <a class="btn" href="book-now.html">Book a call</a>
+    </div>
 
-  <div class="card">
-    <h3 style="margin-top:0;">When to call</h3>
-    <ul>
-      <li>Output depends on “who is on shift”</li>
-      <li>Scrap/rework spikes without a clear driver</li>
-      <li>Tribal knowledge risk is growing</li>
-      <li>You’re missing targets and the real constraint is unclear</li>
-      <li>You’re preparing to launch, scale, or transfer production</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Common problems I fix</h3>
+      <ul>
+        <li>Processes that depend on who is on shift</li>
+        <li>Scrap/rework spikes without clear root cause</li>
+        <li>Tribal knowledge lives in a few heads</li>
+        <li>Capacity is tight, but the constraint is unclear</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3 style="margin-top:0;">Primary engagements</h3>
-    <ul>
-      <li><strong>Process Standardization & Throughput Stabilization</strong> — create a repeatable baseline and reduce variability</li>
-      <li><strong>Manufacturing Readiness & Process Industrialization</strong> — reduce risk before launch/scale/transfer</li>
-      <li><strong>Throughput, Capacity & Bottleneck Analysis</strong> — identify the true constraint and decision-ready options</li>
-    </ul>
-    <p style="margin-top:10px;">
-      <a href="services.html">View all engagements →</a>
-    </p>
-  </div>
   </main>
 
-  <footer>
-    © <span id="y"></span> AC Manufacturing Solutions
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  </footer>
+  {% include footer.html %}
+
 </body>
 </html>
