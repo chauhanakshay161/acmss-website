@@ -1,37 +1,17 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | AC Manufacturing Solutions</title>
-  <meta name="description" content="Contact AC Manufacturing Solutions to discuss process stability, throughput, and manufacturing readiness." />
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; line-height:1.5}
-    header{padding:28px 18px; background:#0b0f14; color:#fff}
-    nav a{color:#fff; text-decoration:none; margin-right:14px; opacity:.9}
-    nav a:hover{opacity:1}
-    main{max-width:900px; margin:0 auto; padding:28px 18px}
-    .card{border:1px solid #e6e6e6; border-radius:14px; padding:18px; margin-top:14px}
-    label{display:block; font-weight:600; margin-top:12px}
-    input, textarea{width:100%; padding:10px; border-radius:10px; border:1px solid #ccc; font:inherit}
-    textarea{min-height:140px}
-    .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:#0b0f14; color:#fff; text-decoration:none; border:0; cursor:pointer}
-    .muted{color:#555}
-    footer{padding:22px 18px; color:#666}
-  </style>
+  <title>About | AC Manufacturing Solutions</title>
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1 style="margin:0 0 10px;">AC Manufacturing Solutions</h1>
-    <p style="margin:0 0 12px; opacity:.85;">Stabilizing Manufacturing Processes and Unlocking Throughput</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="book-now.html">Book Now</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+
+  {% include header.html %}
 
   <main>
     <div class="card">
@@ -84,9 +64,7 @@
     </div>
   </main>
 
-  <footer>
-    © <span id="y"></span> AC Manufacturing Solutions
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  </footer>
+ {% include footer.html %}
+
 </body>
 </html>
