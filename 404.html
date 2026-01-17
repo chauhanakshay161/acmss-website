@@ -1,0 +1,29 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | AC Manufacturing Solutions</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+  {% include header.html %}
+
+  <main>
+    <div class="card">
+      <h2 style="margin-top:0;">Page not found</h2>
+      <p class="muted">
+        The link may be broken or the page may have moved.
+      </p>
+      <a class="btn" href="{{ '/' | relative_url }}">Go to Home</a>
+      <a style="margin-left:12px;" href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>
