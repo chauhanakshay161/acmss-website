@@ -4,19 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | AC Manufacturing Solutions</title>
-  <meta name="description" content="Service options from AC Manufacturing Solutions for stabilizing processes and improving throughput." />
+  <meta name="description" content="Structured manufacturing engagements focused on stabilizing processes, improving throughput, and reducing operational risk." />
   <style>
-    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:0; line-height:1.5}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; line-height:1.5}
     header{padding:28px 18px; background:#0b0f14; color:#fff}
     nav a{color:#fff; text-decoration:none; margin-right:14px; opacity:.9}
     nav a:hover{opacity:1}
     main{max-width:1000px; margin:0 auto; padding:28px 18px}
     .card{border:1px solid #e6e6e6; border-radius:14px; padding:18px; margin-top:14px}
-    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
-    @media(max-width:900px){.grid{grid-template-columns:1fr}}
     .btn{display:inline-block; padding:10px 14px; border-radius:12px; background:#0b0f14; color:#fff; text-decoration:none}
-    footer{padding:22px 18px; color:#666}
+    .muted{color:#555}
+    .tag{display:inline-block; font-size:12px; padding:4px 10px; border-radius:999px; border:1px solid #ddd; margin-right:8px}
+    details{border:1px solid #e6e6e6; border-radius:14px; padding:14px 16px; margin-top:12px}
+    summary{cursor:pointer; font-weight:700}
     ul{margin:10px 0 0 18px}
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media(max-width:900px){.split{grid-template-columns:1fr}}
+    footer{padding:22px 18px; color:#666}
   </style>
 </head>
 <body>
@@ -33,54 +37,206 @@
 
   <main>
     <div class="card">
-      <h2 style="margin-top:0;">Services</h2>
-      <p>
-        Simple, outcome-focused engagements designed to stabilize execution, reduce variability,
-        and improve throughput.
+      <h2 style="margin-top:0;">Services (Structured Engagements)</h2>
+      <p class="muted" style="margin-top:8px;">
+        Important framing rule: These are engagements, not à-la-carte services.
+        CAD, SOPs, and analysis are tools, not the product.
+      </p>
+      <p style="margin-top:12px;">
+        If you’re not sure which engagement fits, start with a short call and we’ll identify the constraint and the right next step.
       </p>
       <a class="btn" href="book-now.html">Book a call</a>
-    </div>
-
-    <div class="grid" style="margin-top:14px;">
-      <div class="card">
-        <h3 style="margin-top:0;">1) Process Stability Diagnostic</h3>
-        <p>Identify the true constraint and top instability drivers.</p>
-        <ul>
-          <li>Shop-floor observation + data review</li>
-          <li>Issues ranked by impact and effort</li>
-          <li>30-day action plan</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0;">2) Standard Work + Documentation Pack</h3>
-        <p>Turn unclear work into repeatable execution.</p>
-        <ul>
-          <li>SOPs / work instructions / check sheets</li>
-          <li>Setup standardization</li>
-          <li>Quality gates to improve first-pass yield</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0;">3) Bottleneck Removal Sprint</h3>
-        <p>A short sprint to move throughput on the constraint.</p>
-        <ul>
-          <li>Constraint validation</li>
-          <li>Countermeasure design + implementation support</li>
-          <li>Before/after KPI tracking</li>
-        </ul>
-      </div>
+      <span class="tag">Outcome-focused</span>
+      <span class="tag">Scoped</span>
+      <span class="tag">Shop-floor practical</span>
     </div>
 
     <div class="card">
-      <h3 style="margin-top:0;">Optional add-ons</h3>
-      <ul>
-        <li>Tooling / fixture concepts and basic CAD support</li>
-        <li>Measurement plans and inspection checks</li>
-        <li>Vendor communication packages for quoting and process alignment</li>
-      </ul>
+      <h3 style="margin-top:0;">Primary engagements</h3>
+
+      <details open>
+        <summary>1) Process Standardization & Throughput Stabilization <span class="muted">(Foundational)</span></summary>
+        <div class="split">
+          <div>
+            <p><strong>Who this is for</strong><br>
+              Manufacturing and operations leaders facing inconsistent execution, tribal knowledge risk, throughput variability, or dependence on a few key individuals.
+            </p>
+            <p><strong>Core problem</strong><br>
+              Processes are not repeatable or clearly defined, limiting throughput, onboarding, and improvement.
+            </p>
+            <p><strong>What this engagement does</strong></p>
+            <ul>
+              <li>Identifies process constraints and variability</li>
+              <li>Converts undocumented knowledge into usable standards</li>
+              <li>Establishes a stable baseline for future improvement</li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Typical deliverables</strong></p>
+            <ul>
+              <li>Targeted process documentation (SOPs, SIPs, work instructions)</li>
+              <li>Supporting CAD where ambiguity exists</li>
+              <li>Process flow summaries</li>
+              <li>Management-level stability and throughput assessment</li>
+              <li>Prioritized improvement roadmap</li>
+            </ul>
+            <p><strong>What this is not</strong></p>
+            <ul>
+              <li>Generic Lean training</li>
+              <li>Full documentation of every operation</li>
+              <li>Open-ended engineering support</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>2) Manufacturing Readiness & Process Industrialization</summary>
+        <div class="split">
+          <div>
+            <p><strong>Who this is for</strong><br>
+              Teams preparing to launch new products, scale production, or transfer work internally or between suppliers.
+            </p>
+            <p><strong>Core problem</strong><br>
+              Products or processes are technically complete but not ready for repeatable, predictable production.
+            </p>
+            <p><strong>What this engagement does</strong></p>
+            <ul>
+              <li>Evaluates production readiness from a manufacturing perspective</li>
+              <li>Identifies gaps between design intent and shop-floor reality</li>
+              <li>Reduces risk before volume or transfer decisions are made</li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Typical deliverables</strong></p>
+            <ul>
+              <li>Manufacturing readiness assessment</li>
+              <li>Process definition and standardization</li>
+              <li>Critical tooling or part CAD (as required)</li>
+              <li>Work instructions for early-stage or unstable operations</li>
+              <li>Risk register with mitigation actions</li>
+            </ul>
+            <p><strong>What this is not</strong></p>
+            <ul>
+              <li>Design ownership</li>
+              <li>NPI program management</li>
+              <li>Prototype iteration services</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Throughput, Capacity & Bottleneck Analysis</summary>
+        <div class="split">
+          <div>
+            <p><strong>Who this is for</strong><br>
+              Managers and directors who suspect hidden constraints, are missing output targets, or are considering overtime, outsourcing, or capital spend.
+            </p>
+            <p><strong>Core problem</strong><br>
+              Throughput is limited by poorly understood constraints rather than true capacity limits.
+            </p>
+            <p><strong>What this engagement does</strong></p>
+            <ul>
+              <li>Identifies true bottlenecks and variability drivers</li>
+              <li>Separates perception from data and observation</li>
+              <li>Clarifies where improvement or investment actually matters</li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Typical deliverables</strong></p>
+            <ul>
+              <li>Constraint and bottleneck analysis</li>
+              <li>Cycle-time and variability assessment</li>
+              <li>Capacity confidence summary</li>
+              <li>Short-term and medium-term improvement options</li>
+              <li>Decision-support summary for leadership</li>
+            </ul>
+            <p><strong>What this is not</strong></p>
+            <ul>
+              <li>Time studies for their own sake</li>
+              <li>ERP reconfiguration</li>
+              <li>Continuous improvement task lists</li>
+            </ul>
+          </div>
+        </div>
+      </details>
     </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Specialist engagements</h3>
+
+      <details>
+        <summary>4) Documentation, SOP & Knowledge-Capture Programs</summary>
+        <div class="split">
+          <div>
+            <p><strong>Who this is for</strong><br>
+              Organizations with aging workforce risk, undocumented methods, or audit/quality/onboarding challenges.
+            </p>
+            <p><strong>Core problem</strong><br>
+              Critical manufacturing knowledge lives in people, not systems.
+            </p>
+            <p><strong>What this engagement does</strong></p>
+            <ul>
+              <li>Captures and formalizes critical process knowledge</li>
+              <li>Creates documentation that reflects reality, not theory</li>
+              <li>Reduces operational risk tied to personnel dependency</li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Typical deliverables</strong></p>
+            <ul>
+              <li>SOPs, SIPs, and work instructions for critical processes</li>
+              <li>Supporting CAD or sketches where clarity is required</li>
+              <li>Standardization plans aligned to actual execution</li>
+              <li>Documentation hierarchy and governance guidance</li>
+            </ul>
+            <p><strong>What this is not</strong></p>
+            <ul>
+              <li>Technical writing services</li>
+              <li>Cosmetic document clean-up</li>
+              <li>ISO/Lean checkbox documentation</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Automation & Capital Decision Support</summary>
+        <div class="split">
+          <div>
+            <p><strong>Who this is for</strong><br>
+              Leaders considering automation, new equipment, or major process investment.
+            </p>
+            <p><strong>Core problem</strong><br>
+              Capital decisions are being made without a stable process baseline or clear ROI logic.
+            </p>
+            <p><strong>What this engagement does</strong></p>
+            <ul>
+              <li>Assesses process suitability for automation</li>
+              <li>Identifies prerequisites often ignored</li>
+              <li>Reduces risk of premature or misaligned capital spend</li>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Typical deliverables</strong></p>
+            <ul>
+              <li>Automation readiness assessment</li>
+              <li>Process stability gap analysis</li>
+              <li>High-level feasibility and risk framing</li>
+              <li>Recommendations on what to stabilize before investing</li>
+            </ul>
+            <p><strong>What this is not</strong></p>
+            <ul>
+              <li>Machine specification or vendor selection</li>
+              <li>Controls or programming services</li>
+              <li>Turnkey automation projects</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </div>
+
   </main>
 
   <footer>
