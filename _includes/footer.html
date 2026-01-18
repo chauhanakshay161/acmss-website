@@ -1,4 +1,32 @@
 <footer>
-  © <span id="y"></span> AC Manufacturing Solutions
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <div style="
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 18px;
+  ">
+
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      border-top:1px solid #e6e6e6;
+      padding-top:14px;
+    ">
+      <div class="muted">
+        © <span id="y"></span> AC Manufacturing Solutions
+      </div>
+
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">About</a>
+        <a href="{{ '/services.html' | relative_url }}">Services</a>
+        <a href="{{ '/book-now.html' | relative_url }}">Book Now</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+      </div>
+    </div>
+
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  </div>
 </footer>
+
