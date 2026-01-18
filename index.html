@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AC Manufacturing Solutions</title>
-  <meta name="description" content="Structured engagements to stabilize manufacturing execution and unlock throughput." />
+  <meta name="description" content="Structured manufacturing engagements to stabilize execution and unlock throughput you can plan around." />
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
@@ -15,200 +15,160 @@
 
   <main>
 
-    <!-- HERO SPLIT -->
-<section style="
-  background:#0b0f14;
-  border-radius:18px;
-  overflow:hidden;
-  margin:18px 0 28px;
-">
-  <div style="
-    display:flex;
-    min-height:420px;
-    flex-wrap:wrap;
-  ">
+    <!-- HERO (split, black background, no text on image) -->
+    <section class="section" style="background:var(--dark); border-radius:18px; overflow:hidden;">
+      <div style="display:flex; min-height:420px; flex-wrap:wrap;">
 
-    <!-- LEFT: TEXT -->
-    <div style="
-      flex:1;
-      min-width:320px;
-      display:flex;
-      align-items:center;
-      padding:32px;
-      color:#ffffff;
-    ">
-      <div style="max-width:520px; margin-left:auto; margin-right:auto;">
-        <p style="
-          margin:0 0 10px;
-          opacity:.85;
-          font-weight:600;
-          letter-spacing:.3px;
+        <!-- Left: text -->
+        <div style="
+          flex:1;
+          min-width:320px;
+          display:flex;
+          align-items:center;
+          padding:34px;
+          color:#ffffff;
         ">
-          AC Manufacturing Solutions
-        </p>
+          <div style="max-width:540px; margin:0 auto;">
+            <p class="small" style="margin:0 0 10px; opacity:.85; font-weight:700; letter-spacing:.3px;">
+              AC Manufacturing Solutions
+            </p>
 
-        <h1 style="
-          margin:0 0 14px;
-          font-size:38px;
-          font-weight:900;
-          line-height:1.05;
-        ">
-          Stabilize execution.<br>
-          Unlock throughput you can plan around.
-        </h1>
+            <h1 style="
+              margin:0 0 14px;
+              font-size:40px;
+              font-weight:900;
+              line-height:1.03;
+              letter-spacing:-0.5px;
+            ">
+              Stabilize execution.<br>
+              Unlock throughput you can plan around.
+            </h1>
 
-        <p style="
-          margin:0 0 18px;
-          font-size:16px;
-          opacity:.92;
-        ">
-          Structured manufacturing engagements for leaders dealing with inconsistent output,
-          tribal knowledge risk, and unclear capacity constraints.
-        </p>
+            <p style="margin:0 0 18px; font-size:16px; opacity:.92; line-height:1.5;">
+              Structured manufacturing engagements for leaders dealing with inconsistent output,
+              tribal knowledge risk, and unclear capacity constraints.
+            </p>
 
-        <div>
-          <a class="btn" href="{{ '/book-now.html' | relative_url }}">Book an exploratory call</a>
-          <a style="
-            margin-left:14px;
-            color:#ffffff;
-            opacity:.9;
-            text-decoration:underline;
-          "
-             href="{{ '/services.html' | relative_url }}">
-            View services
-          </a>
+            <div style="margin-top:6px;">
+              <a class="btn" href="{{ '/book-now.html' | relative_url }}">Book an exploratory call</a>
+              <a class="link-light" style="margin-left:14px;" href="{{ '/services.html' | relative_url }}">View services</a>
+            </div>
+
+            <p class="small" style="margin:12px 0 0; opacity:.72;">
+              Initial conversations are exploratory. No obligation. No sales pitch.
+            </p>
+          </div>
         </div>
+
+        <!-- Right: image -->
+        <div style="
+          flex:1;
+          min-width:320px;
+          background-image:url('{{ '/assets/images/hero.png' | relative_url }}');
+          background-size:cover;
+          background-position:center;
+        "></div>
+
       </div>
-    </div>
-
-    <!-- RIGHT: IMAGE -->
-    <div style="
-      flex:1;
-      min-width:320px;
-      background-image:url('{{ '/assets/images/hero.png' | relative_url }}');
-      background-size:cover;
-      background-position:center;
-    ">
-    </div>
-
-  </div>
-</section>
-
+    </section>
 
     <!-- COMMON PROBLEMS -->
-    <section class="card">
-      <h2 style="margin-top:0;">Common manufacturing problems that quietly kill throughput</h2>
-      <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <div class="card" style="flex:1; min-width:240px; margin-top:0;">
-          <h3 style="margin-top:0;">Inconsistent Execution</h3>
-          <p class="muted" style="margin:0;">Output depends on who is on shift. Methods drift. Results vary.</p>
+    <section class="section card">
+      <h2 class="h2">Common manufacturing problems that quietly kill throughput</h2>
+
+      <div class="grid-3" style="margin-top:12px;">
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Inconsistent execution</div>
+          <p class="muted" style="margin:0;">
+            Output depends on who is on shift. Methods drift. Results vary.
+          </p>
         </div>
-        <div class="card" style="flex:1; min-width:240px; margin-top:0;">
-          <h3 style="margin-top:0;">Tribal Knowledge Risk</h3>
-          <p class="muted" style="margin:0;">Critical steps live in people’s heads, not in repeatable standards.</p>
+
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Tribal knowledge risk</div>
+          <p class="muted" style="margin:0;">
+            Critical steps live in people’s heads, not in repeatable standards.
+          </p>
         </div>
-        <div class="card" style="flex:1; min-width:240px; margin-top:0;">
-          <h3 style="margin-top:0;">Unknown Constraints</h3>
-          <p class="muted" style="margin:0;">Capacity feels tight, but the true bottleneck is unclear or moving.</p>
+
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Unknown constraints</div>
+          <p class="muted" style="margin:0;">
+            Capacity feels tight, but the true bottleneck is unclear or moving.
+          </p>
         </div>
       </div>
 
-      <div style="margin-top:14px; border-top:1px solid #e6e6e6; padding-top:14px;">
-        <p style="margin:0; font-weight:800;">
-          If your process isn’t repeatable, your throughput is not real.
-        </p>
-        <p class="muted" style="margin:6px 0 0;">
-          We stabilize the process first, then improve it with confidence.
-        </p>
-      </div>
+      <hr class="hr">
+
+      <p style="margin:0; font-weight:900;">
+        If your process isn’t repeatable, your throughput is not real.
+      </p>
+      <p class="muted" style="margin:6px 0 0;">
+        We stabilize the process first, then improve it with confidence.
+      </p>
     </section>
 
-    <!-- BOLD POSITIONING -->
-    <section class="card">
-      <h2 style="margin-top:0;">How this is different</h2>
-      <ul style="margin:0;">
-        <li><strong>Engagements, not a service menu.</strong> Clear start point, defined scope, and decision-ready outputs.</li>
-        <li><strong>Not Lean theatre.</strong> No workshops for the sake of workshops. We focus on constraints and stability.</li>
-        <li><strong>Tools are not the product.</strong> CAD, SOPs, and analysis are used only when they reduce ambiguity.</li>
-      </ul>
-    </section>
+    <!-- HOW ENGAGEMENTS WORK (soft background for rhythm) -->
+    <section class="section soft">
+      <h2 class="h2">How our engagements work</h2>
 
-    <!-- BIRD’S-EYE VIEW OF SERVICES -->
-    <section class="card">
-      <h2 style="margin-top:0;">Engagements at a glance</h2>
-      <p class="muted" style="margin-top:-6px;">
-        Engagement #1 is the default starting point. Everything else is situational.
+      <p style="margin:0 0 12px;">
+        We don’t start with tools, training, or templates.
+        We start by understanding how work actually flows on the shop floor — where variability enters the process and where throughput is constrained.
       </p>
 
-      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <p style="margin:0 0 12px;">
+        Engagements are structured, time-bound, and outcome-focused. The goal is to give manufacturing leaders clarity on what to stabilize first,
+        what to improve next, and where additional investment will actually matter.
+      </p>
 
-        <!-- Primary -->
-        <div class="card" style="flex:1; min-width:280px; margin-top:0; border:2px solid #0b0f14;">
-          <h3 style="margin-top:0;">1) Process Standardization & Throughput Stabilization</h3>
-          <p class="muted" style="margin:0;">
-            Turn unstable, undocumented shop-floor execution into repeatable standards and a clear improvement roadmap.
-          </p>
-          <p style="margin:10px 0 0; font-weight:800;">Start here.</p>
+      <p class="muted" style="margin:0;">
+        Documentation, CAD, and analysis are used only where they reduce ambiguity and support repeatable execution — not as deliverables for their own sake.
+      </p>
+    </section>
+
+    <!-- SERVICES AT A GLANCE (bird's-eye) -->
+    <section class="section card">
+      <h2 class="h2">Structured engagements, not à-la-carte services</h2>
+      <p class="muted" style="margin:0 0 14px;">
+        Our work is delivered through clearly defined engagements, each designed to address a specific stage of manufacturing stability and readiness.
+      </p>
+
+      <div class="grid-2">
+        <div class="card" style="margin:0; border:2px solid var(--dark);">
+          <div class="h3" style="font-weight:900;">Process Standardization & Throughput Stabilization</div>
+          <p class="muted" style="margin:0;">The default entry point for most teams.</p>
         </div>
 
-        <!-- Secondary -->
-        <div class="card" style="flex:1; min-width:280px; margin-top:0;">
-          <h3 style="margin-top:0;">2) Manufacturing Readiness & Industrialization</h3>
-          <p class="muted" style="margin:0;">
-            Reduce launch/transfer risk by identifying gaps between design intent and production reality.
-          </p>
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Manufacturing Readiness & Process Industrialization</div>
+          <p class="muted" style="margin:0;">Reduce launch or transfer risk before scale.</p>
         </div>
 
-        <div class="card" style="flex:1; min-width:280px; margin-top:0;">
-          <h3 style="margin-top:0;">3) Throughput, Capacity & Bottleneck Analysis</h3>
-          <p class="muted" style="margin:0;">
-            Find the true constraint, quantify variability, and support decisions around overtime, outsourcing, or capital.
-          </p>
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Throughput, Capacity & Bottleneck Analysis</div>
+          <p class="muted" style="margin:0;">Find the true constraint and what to do about it.</p>
         </div>
 
-        <div class="card" style="flex:1; min-width:280px; margin-top:0;">
-          <h3 style="margin-top:0;">4) Documentation & Knowledge Capture</h3>
-          <p class="muted" style="margin:0;">
-            Capture critical process knowledge into SOPs/SIPs/work instructions tied to real execution.
-          </p>
+        <div class="card" style="margin:0;">
+          <div class="h3" style="font-weight:900;">Automation & Capital Decision Support</div>
+          <p class="muted" style="margin:0;">De-risk major equipment and automation decisions.</p>
         </div>
-
-        <div class="card" style="flex:1; min-width:280px; margin-top:0;">
-          <h3 style="margin-top:0;">5) Automation & Capital Decision Support</h3>
-          <p class="muted" style="margin:0;">
-            Prevent premature automation by assessing stability, prerequisites, and investment risk.
-          </p>
-        </div>
-
       </div>
 
       <div style="margin-top:14px;">
-        <a class="btn" href="{{ '/services.html' | relative_url }}">Go to Services</a>
+        <a class="btn-dark" href="{{ '/services.html' | relative_url }}">Go to Services</a>
       </div>
     </section>
 
-    <!-- HOW ENGAGEMENTS START -->
-    <section class="card">
-      <h2 style="margin-top:0;">How engagements start</h2>
-      <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <div class="card" style="flex:1; min-width:220px; margin-top:0;">
-          <h3 style="margin-top:0;">1) Quick fit check</h3>
-          <p class="muted" style="margin:0;">Short call to understand the constraint and confirm there’s a real win.</p>
-        </div>
-        <div class="card" style="flex:1; min-width:220px; margin-top:0;">
-          <h3 style="margin-top:0;">2) Defined scope</h3>
-          <p class="muted" style="margin:0;">Time-bound engagement with specific outcomes and clear boundaries.</p>
-        </div>
-        <div class="card" style="flex:1; min-width:220px; margin-top:0;">
-          <h3 style="margin-top:0;">3) Decision-ready output</h3>
-          <p class="muted" style="margin:0;">You get clarity: what to stabilize, what to improve, and what to ignore.</p>
-        </div>
-      </div>
-
-      <div style="margin-top:14px;">
-        <a class="btn" href="{{ '/book-now.html' | relative_url }}">Book a call</a>
-        <a style="margin-left:12px;" href="{{ '/contact.html' | relative_url }}">Or contact us</a>
-      </div>
+    <!-- FINAL CTA (simple, not crowded) -->
+    <section class="section card">
+      <h2 class="h2">Start with a short exploratory call</h2>
+      <p class="muted" style="margin:0 0 12px;">
+        We’ll clarify the constraint, confirm fit, and recommend a clean next step.
+      </p>
+      <a class="btn-dark" href="{{ '/book-now.html' | relative_url }}">Book a call</a>
     </section>
 
   </main>
@@ -217,3 +177,4 @@
 
 </body>
 </html>
+
