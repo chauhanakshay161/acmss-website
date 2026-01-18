@@ -285,4 +285,31 @@ main{
   transform: translateY(-1px);
   transition: transform .12s ease;
 }
+ /* ===== Primary CTA emphasis ===== */
 
+/* Used for main actions like Book a call */
+.btn-primary{
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:12px;
+  background:#0b0f14;
+  color:#ffffff;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid #0b0f14;
+  box-shadow: 0 6px 18px rgba(11,15,20,.18);
+}
+
+/* Used for secondary but important actions like Go to Services */
+.btn-outline{
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:12px;
+  background:#ffffff;
+  color:#0b0f14;
+  font-weight:800;
+  text-decoration:none;
+  border:2px solid #0b0f14;
+}
+
+ 
