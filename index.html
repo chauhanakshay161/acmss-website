@@ -16,17 +16,9 @@
   <main>
 
     <!-- HERO SPLIT -->
-<section style="
-  background:#0b0f14;
-  border-radius:18px;
-  overflow:hidden;
-  margin:18px 0 28px;
-">
-  <div style="
-    display:flex;
-    min-height:420px;
-    flex-wrap:wrap;
-  ">
+<!-- HERO SPLIT (FULL-WIDTH) -->
+<section class="hero-fw" style="background:#0b0f14;">
+  <div class="hero-inner" style="display:flex; min-height:440px; flex-wrap:wrap;">
 
     <!-- LEFT: TEXT -->
     <div style="
@@ -34,14 +26,14 @@
       min-width:320px;
       display:flex;
       align-items:center;
-      padding:32px;
+      padding:36px 18px;
       color:#ffffff;
     ">
-      <div style="max-width:520px; margin-left:auto; margin-right:auto;">
+      <div style="max-width:560px; margin-left:auto; margin-right:auto;">
         <p style="
           margin:0 0 10px;
           opacity:.85;
-          font-weight:600;
+          font-weight:700;
           letter-spacing:.3px;
         ">
           AC Manufacturing Solutions
@@ -49,9 +41,10 @@
 
         <h1 style="
           margin:0 0 14px;
-          font-size:38px;
+          font-size:40px;
           font-weight:900;
-          line-height:1.05;
+          line-height:1.03;
+          letter-spacing:-0.4px;
         ">
           Stabilize execution.<br>
           Unlock throughput you can plan around.
@@ -61,12 +54,14 @@
           margin:0 0 18px;
           font-size:16px;
           opacity:.92;
+          line-height:1.5;
+          max-width:520px;
         ">
           Structured manufacturing engagements for leaders dealing with inconsistent output,
           tribal knowledge risk, and unclear capacity constraints.
         </p>
 
-        <div>
+        <div style="margin-top:6px;">
           <a class="btn" href="{{ '/book-now.html' | relative_url }}">Book an exploratory call</a>
           <a style="
             margin-left:14px;
@@ -78,21 +73,26 @@
             View services
           </a>
         </div>
+
+        <p style="margin:12px 0 0; font-size:13px; opacity:.72;">
+          Initial conversations are exploratory. No obligation. No sales pitch.
+        </p>
       </div>
     </div>
 
-    <!-- RIGHT: IMAGE -->
+    <!-- RIGHT: IMAGE (NO TEXT) -->
     <div style="
       flex:1;
       min-width:320px;
       background-image:url('{{ '/assets/images/hero.png' | relative_url }}');
       background-size:cover;
       background-position:center;
-    ">
-    </div>
+      background-repeat:no-repeat;
+    "></div>
 
   </div>
 </section>
+
 
 
     <!-- COMMON PROBLEMS -->
