@@ -181,4 +181,52 @@ main{
   margin: 0 auto;
   padding: 18px 0;
 }
+/* ===== Contrast upgrades (monochrome, senior) ===== */
+
+body{
+  background:#f4f6f8;
+}
+
+/* Keep main content readable */
+main{
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px 18px 50px;
+}
+
+/* Stronger card separation */
+.card{
+  background:#ffffff;
+  border:1px solid #e3e7ee;
+  border-radius:16px;
+  box-shadow: 0 1px 0 rgba(11,15,20,.04);
+}
+
+/* Headings feel more deliberate */
+.card h2{
+  letter-spacing:-0.3px;
+}
+
+.card h3{
+  letter-spacing:-0.15px;
+}
+
+/* Softer muted text */
+.muted{
+  color: rgba(11,15,20,.68);
+}
+
+/* Section band to break the page (we'll use it once) */
+.band{
+  background:#eef2f6;
+  border:1px solid #e3e7ee;
+  border-radius:18px;
+  padding:18px;
+  margin:18px 0;
+}
+
+/* Optional: highlight cards (still monochrome) */
+.card.accent{
+  border-left: 4px solid #0b0f14;
+}
 
