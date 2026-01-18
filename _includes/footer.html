@@ -1,32 +1,124 @@
-<footer>
-  <div style="
-    max-width:1000px;
-    margin:0 auto;
-    padding:0 18px;
-  ">
+<footer style="background:#0b0f14; color:#ffffff; margin-top:40px;">
+  <div style="max-width:1100px; margin:0 auto; padding:34px 18px;">
 
+    <!-- Top row: newsletter + quick actions -->
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      padding-bottom:22px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    ">
+      <!-- Left: message -->
+      <div style="flex:1; min-width:280px; max-width:520px;">
+        <p style="margin:0 0 10px; font-size:16px; line-height:1.45; opacity:.92;">
+          Get practical insights on process stability, throughput, and shop-floor execution.
+          Short, useful notes for manufacturing leaders.
+        </p>
+        <p style="margin:0; font-size:13px; opacity:.70;">
+          No spam. Unsubscribe anytime.
+        </p>
+      </div>
+
+      <!-- Right: simple subscribe UI (placeholder) -->
+      <div style="flex:1; min-width:280px; max-width:520px;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <input
+            type="email"
+            placeholder="Your email address"
+            style="
+              flex:1;
+              min-width:220px;
+              padding:12px 12px;
+              border-radius:8px;
+              border:1px solid rgba(255,255,255,.18);
+              background:rgba(255,255,255,.10);
+              color:#fff;
+              outline:none;
+            "
+            disabled
+          >
+          <button
+            style="
+              padding:12px 16px;
+              border-radius:8px;
+              border:none;
+              background:#c1121f;
+              color:#fff;
+              font-weight:700;
+              cursor:not-allowed;
+              opacity:.85;
+            "
+            disabled
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+
+        <label style="display:flex; gap:10px; align-items:flex-start; margin-top:10px; font-size:13px; opacity:.80;">
+          <input type="checkbox" disabled style="margin-top:3px;">
+          <span>
+            I agree to receive updates. (Form activation coming soon.)
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Middle row: brand + socials -->
     <div style="
       display:flex;
       justify-content:space-between;
       gap:18px;
       flex-wrap:wrap;
-      border-top:1px solid #e6e6e6;
-      padding-top:14px;
+      align-items:center;
+      padding:18px 0;
     ">
-      <div class="muted">
-        © <span id="y"></span> AC Manufacturing Solutions
+      <!-- Brand -->
+      <div style="display:flex; align-items:center; gap:12px;">
+        <img
+          src="{{ '/assets/images/logo.png' | relative_url }}"
+          alt="AC Manufacturing Solutions logo"
+          style="height:36px; width:auto; background:#fff; padding:4px 6px; border-radius:6px;"
+        >
+        <div style="font-weight:800; letter-spacing:.5px;">
+          AC MANUFACTURING SOLUTIONS
+        </div>
       </div>
 
-      <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about.html' | relative_url }}">About</a>
-        <a href="{{ '/services.html' | relative_url }}">Services</a>
-        <a href="{{ '/book-now.html' | relative_url }}">Book Now</a>
-        <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+      <!-- Socials (replace # with your real links later) -->
+      <div style="display:flex; gap:14px; opacity:.9;">
+        <a href="#" style="color:#fff; text-decoration:none;">in</a>
+        <a href="#" style="color:#fff; text-decoration:none;">X</a>
+        <a href="#" style="color:#fff; text-decoration:none;">f</a>
+        <a href="#" style="color:#fff; text-decoration:none;">yt</a>
+        <a href="#" style="color:#fff; text-decoration:none;">ig</a>
       </div>
+    </div>
+
+    <!-- Bottom row: page links -->
+    <div style="
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+      font-size:13px;
+      opacity:.82;
+    ">
+      <a href="{{ '/' | relative_url }}" style="color:#fff; text-decoration:none;">Home</a>
+      <a href="{{ '/about.html' | relative_url }}" style="color:#fff; text-decoration:none;">About</a>
+      <a href="{{ '/services.html' | relative_url }}" style="color:#fff; text-decoration:none;">Services</a>
+      <a href="{{ '/book-now.html' | relative_url }}" style="color:#fff; text-decoration:none;">Book Now</a>
+      <a href="{{ '/contact.html' | relative_url }}" style="color:#fff; text-decoration:none;">Contact</a>
+    </div>
+
+    <!-- Copyright -->
+    <div style="margin-top:14px; font-size:12px; opacity:.55;">
+      © <span id="y"></span> AC Manufacturing Solutions
     </div>
 
     <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   </div>
 </footer>
-
