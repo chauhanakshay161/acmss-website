@@ -170,4 +170,15 @@ main{
   border:0;
   margin: 14px 0;
 }
+/* Full-width hero that still keeps content aligned */
+.hero-fw{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.hero-inner{
+  max-width: 1100px; /* match your main width vibe */
+  margin: 0 auto;
+  padding: 18px 0;
+}
 
