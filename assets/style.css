@@ -252,7 +252,7 @@ h3 {
 
 .header-row { display: flex; align-items: center; justify-content: space-between; height: 92px; }
 
-.logo { display: block; width: 200px; flex-shrink: 0; }
+.logo { display: block; width: 252px; flex-shrink: 0; }
 .logo img { width: 100%; height: auto; }
 
 .nav { display: flex; align-items: center; gap: 6px; }
@@ -332,7 +332,7 @@ h3 {
   .nav { display: none; }
   .menu-btn { display: inline-flex; }
   .header-row, .header-space { height: 76px; }
-  .logo { width: 164px; }
+  .logo { width: 196px; }
   .mobile-menu { padding-top: 96px; }
 }
 
@@ -713,7 +713,7 @@ h3 {
 
 .site-footer { background: var(--night); color: var(--steel-500); border-top: 1px solid var(--hair); font-size: 15px; }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 3fr) minmax(0, 3fr); gap: 36px var(--col-gap); padding-block: 72px 56px; }
-.footer-logo { width: 184px; margin-bottom: 22px; }
+.footer-logo { width: 224px; margin-bottom: 24px; }
 .footer-line { max-width: 24em; }
 .footer-nav, .footer-contact { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .site-footer a { color: var(--steel-300); text-decoration: none; transition: color .3s; }
