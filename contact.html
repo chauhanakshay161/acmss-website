@@ -1,66 +1,80 @@
 ---
+layout: default
+title: Contact | AC Manufacturing Solutions
+description: Send a short description of your process and the problem you're facing. If it's a fit, we'll suggest a scoped engagement.
+canonical: /contact.html
+slug: contact
 ---
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | AC Manufacturing Solutions</title>
+<section class="page-head">
+  <div class="wrap">
+    <h1>Tell us about the problem.</h1>
+    <p class="lead">A few lines on your process and what's going wrong is enough. If it's a fit, we'll suggest a scoped next step. If it isn't, we'll say so.</p>
+  </div>
+</section>
 
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-</head>
-<body>
+<section class="block flush-top">
+  <div class="wrap grid two-col">
+    <div class="col-main panel">
+      <h2>Send a message</h2>
+      <form class="form" action="https://formsubmit.co/hello@acmss.ca" method="POST" data-form>
+        <input type="hidden" name="_subject" value="New inquiry from acmss.ca">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://acmss.ca/thanks.html">
+        <div class="hp" aria-hidden="true">
+          <label for="hp-field">Leave this empty</label>
+          <input id="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
 
-  {% include header.html %}
+        <div class="row">
+          <div class="field" data-required>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <p class="error" id="name-error">Enter your name.</p>
+          </div>
+          <div class="field">
+            <label for="company">Company <span class="opt">(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization">
+          </div>
+        </div>
 
-  <main>
-    <div class="card">
-      <h2 style="margin-top:0;">Contact</h2>
-      <p class="muted">
-        Share a brief description of your process and the problem you’re facing. If it’s a fit, we’ll suggest a scoped engagement.
-      </p>
-    </div>
+        <div class="field" data-required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="error" id="email-error">Enter an email address we can reply to, like name@company.com.</p>
+        </div>
 
-    <div class="card">
-      <h3 style="margin-top:0;">Send a message</h3>
+        <div class="field" data-required>
+          <label for="message">What's going on?</label>
+          <textarea id="message" name="message" required aria-describedby="message-error" placeholder="The process you want to stabilize and what you're seeing: scrap, rework, throughput, onboarding, capacity."></textarea>
+          <p class="error" id="message-error">Add a sentence or two about the problem.</p>
+        </div>
 
-      <!-- FormSubmit: no backend needed -->
-      <form action="https://formsubmit.co/hello@acmss.ca" method="POST">
-        <!-- FormSubmit options -->
-        <input type="hidden" name="_subject" value="New inquiry from acmss.ca" />
-        <input type="hidden" name="_captcha" value="true" />
-
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
-
-        <label for="company">Company</label>
-        <input id="company" name="company" type="text" />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required
-          placeholder="What process are you trying to stabilize? What issue are you seeing (scrap, rework, throughput, onboarding, capacity, etc.)?"></textarea>
-
-        <div style="margin-top:14px;">
-          <button class="btn" type="submit">Send</button>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p>We reply by email, usually within two business days.</p>
         </div>
       </form>
     </div>
 
-    <div class="card">
-      <h3 style="margin-top:0;">What to include</h3>
-      <ul>
-        <li>Process / product family</li>
-        <li>Current pain (scrap, rework, delays, variability, capacity)</li>
-        <li>Any suspected constraint operation</li>
-        <li>Target outcome and timeline</li>
-      </ul>
-    </div>
-  </main>
-
- {% include footer.html %}
-
-</body>
-</html>
+    <aside class="col-side">
+      <div class="side-block">
+        <h3>Prefer email?</h3>
+        <p class="mail-line"><a href="mailto:hello@acmss.ca">hello@acmss.ca</a></p>
+      </div>
+      <div class="side-block">
+        <h3>Useful to include</h3>
+        <ul class="dash-list">
+          <li>Process or product family</li>
+          <li>What hurts: scrap, rework, delays, variation, capacity</li>
+          <li>Any operation you suspect is the constraint</li>
+          <li>The outcome you want and by when</li>
+        </ul>
+      </div>
+      <div class="side-block">
+        <h3>Where we work</h3>
+        <p class="muted">Ottawa and Eastern Ontario on site. Fixed-price packages can be done remotely from anywhere.</p>
+      </div>
+    </aside>
+  </div>
+</section>
