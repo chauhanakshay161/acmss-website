@@ -1,55 +1,26 @@
-<footer style="background:#0b0f14; color:#ffffff; margin-top:40px;">
-  <div style="max-width:1100px; margin:0 auto; padding:34px 18px;">
-
-    <!-- Top row: brand + socials -->
-    <div style="
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:center;
-      padding:0 0 18px;
-    ">
-      <!-- Brand -->
-      <div style="display:flex; align-items:center; gap:12px;">
-        <img
-          src="{{ '/assets/images/logo.png' | relative_url }}"
-          alt="AC Manufacturing Solutions logo"
-          style="height:36px; width:auto; background:#fff; padding:4px 6px; border-radius:6px;"
-        >
-        <div style="font-weight:800; letter-spacing:.5px;">
-          AC MANUFACTURING SOLUTIONS
-        </div>
-      </div>
-
-      <!-- Socials -->
-      <div style="display:flex; gap:14px; opacity:.9;">
-        <a href="https://www.linkedin.com/company/acmanufacturingsolutions/" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">LinkedIn</a>
-      </div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/images/logo-dark.svg" alt="AC Manufacturing Solutions" width="184" height="37">
+      <p class="footer-line">Process standardization and throughput work for manufacturers in Ottawa and Eastern Ontario.</p>
     </div>
 
-    <!-- Bottom row: page links -->
-    <div style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.12);
-      font-size:13px;
-      opacity:.82;
-    ">
-      <a href="{{ '/' | relative_url }}" style="color:#fff; text-decoration:none;">Home</a>
-      <a href="{{ '/about.html' | relative_url }}" style="color:#fff; text-decoration:none;">About</a>
-      <a href="{{ '/services.html' | relative_url }}" style="color:#fff; text-decoration:none;">Services</a>
-      <a href="{{ '/book-now.html' | relative_url }}" style="color:#fff; text-decoration:none;">Book Now</a>
-      <a href="{{ '/contact.html' | relative_url }}" style="color:#fff; text-decoration:none;">Contact</a>
-    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/book-now.html">Book an intro call</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
 
-    <!-- Copyright -->
-    <div style="margin-top:14px; font-size:12px; opacity:.55;">
-      © <span id="y"></span> AC Manufacturing Solutions
+    <div class="footer-contact">
+      <a href="mailto:hello@acmss.ca">hello@acmss.ca</a>
+      <a href="https://www.linkedin.com/company/acmanufacturingsolutions/" target="_blank" rel="noopener">LinkedIn</a>
+      <span>Ottawa, Ontario</span>
     </div>
+  </div>
 
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <div class="wrap footer-base">
+    <p><span>&copy; <span data-year>2026</span> AC Manufacturing Solutions</span><span>Made to tolerance in Ottawa</span></p>
   </div>
 </footer>
