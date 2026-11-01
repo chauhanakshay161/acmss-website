@@ -1,0 +1,160 @@
+---
+layout: default
+title: Process Capability Calculator (Cp, Cpk, Pp, Ppk) | AC Manufacturing Solutions
+description: Free Cpk calculator. Paste your measurements and specification limits to get Cp, Cpk, Pp, Ppk, the expected defect rate in ppm, a histogram and a plain-language verdict. Runs in your browser.
+canonical: /tools/capability-calculator.html
+slug: tools
+---
+<link rel="stylesheet" href="/assets/tools/tools.css?v=1">
+
+<section class="page-head tool-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="/tools/">Free tools</a></p>
+    <h1>Process capability calculator.</h1>
+    <p class="lead">Paste your measurements and specification limits. Get Cp, Cpk, Pp and Ppk, the expected defect rate and a verdict you can take into a meeting. It all runs in your browser, so your data never leaves your computer.</p>
+  </div>
+</section>
+
+<section class="block flush-top" data-cap-tool>
+  <div class="wrap grid tool-grid">
+    <form class="panel tool-input" data-cap-form novalidate>
+      <h2 class="tool-h">Your data</h2>
+
+      <div class="field">
+        <label for="cap-data">Measurements</label>
+        <textarea id="cap-data" name="data" rows="8" spellcheck="false" placeholder="Paste readings in production order, separated by spaces, commas or new lines. Copying a column from Excel works."></textarea>
+        <p class="hint">Use a point for decimals. Keep the readings in the order they were made.</p>
+      </div>
+
+      <div class="row row-3">
+        <div class="field">
+          <label for="cap-lsl">Lower limit <span class="opt">(LSL)</span></label>
+          <input id="cap-lsl" name="lsl" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="cap-usl">Upper limit <span class="opt">(USL)</span></label>
+          <input id="cap-usl" name="usl" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="cap-nom">Nominal <span class="opt">(optional)</span></label>
+          <input id="cap-nom" name="nom" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="cap-sub">Subgroup size</label>
+          <select id="cap-sub" name="sub">
+            <option value="1">1 (individual readings)</option>
+            <option value="2">2</option><option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option><option value="7">7</option>
+            <option value="8">8</option><option value="9">9</option><option value="10">10</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cap-unit">Unit <span class="opt">(optional)</span></label>
+          <input id="cap-unit" name="unit" type="text" placeholder="mm" autocomplete="off">
+        </div>
+      </div>
+
+      <p class="tool-error" role="alert" data-cap-error hidden></p>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Calculate</button>
+        <button class="btn btn-line" type="button" data-cap-sample>Try sample data</button>
+        <button class="text-btn" type="button" data-cap-clear>Clear</button>
+      </div>
+    </form>
+
+    <div class="tool-output" aria-live="polite">
+      <div class="tool-empty" data-cap-empty>
+        <p class="label">Results</p>
+        <p>Enter your readings and at least one limit, or try the sample: 50 bore diameters on a part toleranced Ø25.000 ±0.020 mm, measured in subgroups of five.</p>
+      </div>
+
+      <div class="cap-results" data-cap-out hidden>
+        <div class="kpis">
+          <div class="kpi kpi-main">
+            <p class="label">Cpk, short term</p>
+            <p class="kpi-value" data-o="cpk">0.00</p>
+            <p class="cap-status" data-o="status">Capable</p>
+          </div>
+          <div class="kpi"><p class="label">Cp</p><p class="kpi-value small" data-o="cp">0.00</p></div>
+          <div class="kpi"><p class="label">Ppk, overall</p><p class="kpi-value small" data-o="ppk">0.00</p></div>
+          <div class="kpi"><p class="label">Pp</p><p class="kpi-value small" data-o="pp">0.00</p></div>
+        </div>
+
+        <figure class="chart">
+          <canvas class="chart-canvas" data-cap-chart role="img" aria-label="Histogram of the readings with the specification limits and a fitted normal curve"></canvas>
+          <figcaption>Histogram of your readings, the specification limits, and a normal curve fitted with the overall sigma. The triangle marks the mean.</figcaption>
+        </figure>
+
+        <ul class="findings" data-o="findings"></ul>
+
+        <dl class="tool-stats">
+          <div><dt>Readings</dt><dd data-o="n"></dd></div>
+          <div><dt>Mean</dt><dd><span data-o="mean"></span> <span data-o-unit></span></dd></div>
+          <div><dt>Sigma, within</dt><dd><span data-o="sdw"></span> <span data-o-unit></span></dd></div>
+          <div><dt>Sigma, overall</dt><dd><span data-o="sdo"></span> <span data-o-unit></span></dd></div>
+          <div><dt>Range</dt><dd><span data-o="range"></span> <span data-o-unit></span></dd></div>
+          <div><dt>Cpl and Cpu</dt><dd><span data-o="cpl"></span> and <span data-o="cpu"></span></dd></div>
+          <div><dt>Out of spec, observed</dt><dd data-o="obs"></dd></div>
+          <div><dt>Out of spec, expected</dt><dd><span data-o="ppmw"></span> ppm short term, <span data-o="ppmo"></span> ppm overall</dd></div>
+        </dl>
+
+        <div class="actions tool-actions">
+          <button class="btn btn-line" type="button" data-cap-copy>Copy summary</button>
+          <button class="btn btn-line" type="button" data-cap-print>Print or save as PDF</button>
+          <a class="text-link" href="/contact.html" data-cap-send>Send these results to us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block block-panel">
+  <div class="wrap grid">
+    <div class="section-head sticky">
+      <h2>How to read the numbers</h2>
+      <p class="muted measure">Capability compares the spread of your process with the width of the tolerance. The four indices answer slightly different questions.</p>
+    </div>
+    <dl class="spec explain">
+      <div><dt>Cp</dt><dd>Could the process fit inside the tolerance if it were perfectly centred? It uses short-term variation and ignores where the mean sits.</dd></div>
+      <div><dt>Cpk</dt><dd>Does it fit where it actually runs? The distance from the mean to the nearer limit, divided by three short-term sigma. This is the number most customers ask for.</dd></div>
+      <div><dt>Pp and Ppk</dt><dd>The same questions using overall variation, which includes drift between setups, shifts and material lots. A big gap between Cpk and Ppk means the process isn't stable over time.</dd></div>
+      <div><dt>What is a good Cpk?</dt><dd>Below 1.00 the process is not capable. 1.00 to 1.33 is marginal. 1.33 is the common minimum for production, and 1.67 is typical for new or safety-critical characteristics.</dd></div>
+      <div><dt>Short-term sigma</dt><dd>Estimated from the average moving range for individual readings, or the average subgroup range for subgroups of 2 to 10. Overall sigma is the ordinary sample standard deviation.</dd></div>
+      <div><dt>Before you trust it</dt><dd>Cpk assumes the process is stable, the data are roughly normal and the gauge is good enough. A capable-looking number from an unstable process or a poor gauge is not real.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block no-print">
+  <div class="wrap grid">
+    <div class="section-head">
+      <h2>Need a study you can hand to a customer?</h2>
+    </div>
+    <div class="section-body">
+      <p class="lead">The calculator gives you the indices. A capability study tells you whether to believe them: we check gauge capability, stability over time and the shape of the distribution, then write up what the numbers mean and what to change.</p>
+      <div class="actions tool-cta">
+        <a class="btn btn-primary" href="/services.html#packages">See the capability study package</a>
+        <a class="text-link" href="/tools/stability-assessment.html">Or take the stability self-assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Process capability calculator",
+  "url": "https://acmss.ca/tools/capability-calculator.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+  "description": "Calculates Cp, Cpk, Pp, Ppk and expected defect rate from measurement data and specification limits, in the browser.",
+  "provider": { "@type": "Organization", "name": "AC Manufacturing Solutions", "url": "https://acmss.ca/" }
+}
+</script>
+<script src="/assets/tools/capability.js?v=1" defer></script>
