@@ -1,0 +1,100 @@
+<section class="samples" aria-labelledby="samples-title">
+  <div class="wrap">
+    <div class="samples-head">
+      <p class="eyebrow-ink">What you get</p>
+      <h2 id="samples-title">The proof is in the paperwork.</h2>
+      <p>Every engagement ends in documents your team can pick up on Monday morning. These are samples, made for an imaginary bracket, so you can judge the standard before you call.</p>
+    </div>
+
+    <div class="docs">
+      <article class="doc doc-setup">
+        <span class="stamp" aria-hidden="true">Sample</span>
+        <header class="doc-top">
+          <p class="doc-kind">Setup sheet</p>
+          <p class="doc-id">BRK-1042 · Op 20</p>
+        </header>
+        <dl class="doc-meta">
+          <div><dt>Part</dt><dd>Bracket, rev C</dd></div>
+          <div><dt>Machine</dt><dd>VMC 3</dd></div>
+          <div><dt>Fixture</dt><dd>F-1042-20</dd></div>
+          <div><dt>Program</dt><dd>O1042.20 r4</dd></div>
+        </dl>
+        <svg class="doc-fig" viewBox="0 0 240 110" role="img" aria-label="Fixture sketch with two locating pins and the clamp sequence">
+          <rect x="20" y="18" width="200" height="74" rx="3" class="df-part"/>
+          <circle cx="52" cy="92" r="6" class="df-pin"/><circle cx="188" cy="92" r="6" class="df-pin"/><circle cx="20" cy="55" r="6" class="df-pin"/>
+          <path d="M80 4v14M160 4v14" class="df-clamp"/><path d="M74 10h12M154 10h12" class="df-clamp"/>
+          <g class="df-num"><text x="92" y="12">1</text><text x="172" y="12">2</text></g>
+          <circle cx="120" cy="55" r="12" class="df-hole"/><path d="M104 55h32M120 39v32" class="df-cl"/>
+          <text x="128" y="78" class="df-note">Ø12 H7</text>
+        </svg>
+        <ol class="doc-keys">
+          <li><b>Seat on both pins before clamping.</b> <span>Off one pin, the bore moves 0.1 mm and fails on the CMM.</span></li>
+          <li><b>Clamp 1, then 2, at 25 N·m.</b> <span>Clamping 2 first lifts the far end.</span></li>
+        </ol>
+        <table class="doc-table">
+          <thead><tr><th>First-part check</th><th>Gauge</th><th>If off</th></tr></thead>
+          <tbody><tr><td>Ø12 H7 bore</td><td>Bore gauge</td><td>T14 wear +0.005</td></tr></tbody>
+        </table>
+      </article>
+
+      <article class="doc doc-fai">
+        <span class="stamp" aria-hidden="true">Sample</span>
+        <header class="doc-top">
+          <p class="doc-kind">AS9102 Form 3</p>
+          <p class="doc-id">Characteristic accountability</p>
+        </header>
+        <svg class="doc-fig" viewBox="0 0 240 92" role="img" aria-label="Ballooned drawing with five numbered characteristics">
+          <path d="M30 70V30h120v18h50v22Z" class="df-part"/>
+          <circle cx="90" cy="50" r="9" class="df-hole"/>
+          <g class="df-balloons">
+            <path d="M30 80h120M150 80h50" class="df-dim"/>
+            <circle cx="86" cy="84" r="7"/><text x="86" y="87">1</text>
+            <circle cx="112" cy="24" r="7"/><text x="112" y="27">2</text><path d="M107 29l-12 14" class="df-dim"/>
+            <circle cx="140" cy="16" r="7"/><text x="140" y="19">3</text>
+            <circle cx="214" cy="40" r="7"/><text x="214" y="43">4</text><path d="M207 42l-8 4" class="df-dim"/>
+            <circle cx="20" cy="22" r="7"/><text x="20" y="25">5</text>
+          </g>
+        </svg>
+        <table class="doc-table doc-table-fai">
+          <thead><tr><th>#</th><th>Requirement</th><th>Result</th><th>Tool</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>170.0 ±0.2</td><td>170.06</td><td>CMM</td></tr>
+            <tr><td>2</td><td>Ø12.000 +0.018/0</td><td>12.009</td><td>Bore gauge</td></tr>
+            <tr><td>3</td><td>Position Ø0.10 A B</td><td>0.046</td><td>CMM</td></tr>
+            <tr><td>4</td><td>Ra 1.6</td><td>0.9</td><td>Profilometer</td></tr>
+            <tr><td>5</td><td>Note 4, break edges</td><td>Conforms</td><td>Visual</td></tr>
+          </tbody>
+        </table>
+        <p class="doc-foot"><span>5 of 5 characteristics conform</span><span class="ok">Accept</span></p>
+      </article>
+
+      <article class="doc doc-cap">
+        <span class="stamp" aria-hidden="true">Sample</span>
+        <header class="doc-top">
+          <p class="doc-kind">Capability study</p>
+          <p class="doc-id">Bore Ø25.000 ±0.020</p>
+        </header>
+        <svg class="doc-fig" viewBox="0 0 240 100" role="img" aria-label="Histogram of 50 readings inside the tolerance limits, slightly above nominal">
+          <path d="M40 14v70M200 14v70" class="df-lim"/>
+          <text x="40" y="10" class="df-limt">LSL</text><text x="200" y="10" class="df-limt">USL</text>
+          <path d="M120 18v66" class="df-nom"/>
+          <g class="df-bars">
+            <rect x="104" y="72" width="8" height="12"/><rect x="113" y="60" width="8" height="24"/><rect x="122" y="40" width="8" height="44"/>
+            <rect x="131" y="30" width="8" height="54"/><rect x="140" y="44" width="8" height="40"/><rect x="149" y="62" width="8" height="22"/><rect x="158" y="76" width="8" height="8"/>
+          </g>
+          <path d="M92 84C112 82 120 30 135 28S158 82 178 84" class="df-curve"/>
+          <path d="M20 84h200" class="df-base"/>
+        </svg>
+        <div class="doc-kpis">
+          <div><span>Cpk</span><b>1.58</b></div>
+          <div><span>Ppk</span><b>1.41</b></div>
+          <div><span>Readings</span><b>50</b></div>
+        </div>
+        <p class="doc-verdict"><b>Capable, running 0.0035 mm high.</b> Centring on nominal lifts Cpk to 1.91 with no other change. Gauge R&amp;R 8% of tolerance, so the number can be trusted.</p>
+        <p class="doc-foot"><span>Next review after 100 parts</span><span class="ok">Capable</span></p>
+      </article>
+    </div>
+
+    <p class="samples-note">Sample documents for an imaginary part. Real deliverables follow your drawings, your forms and your customer's requirements.</p>
+  </div>
+</section>

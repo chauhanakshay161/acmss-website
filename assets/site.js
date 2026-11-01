@@ -57,18 +57,42 @@
   }
 
   /* ---------- Process steps: fill the track when reached ---------- */
-  var steps = document.querySelector("[data-steps]");
-  if (steps) {
+  var stepLists = document.querySelectorAll("[data-steps]");
+  if (stepLists.length) {
     if (reduceMotion || !("IntersectionObserver" in window)) {
-      steps.classList.add("is-in");
+      stepLists.forEach(function (el) { el.classList.add("is-in"); });
     } else {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
-          if (en.isIntersecting) { steps.classList.add("is-in"); io.disconnect(); }
+          if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
         });
       }, { threshold: 0.45 });
-      io.observe(steps);
+      stepLists.forEach(function (el) { io.observe(el); });
     }
+  }
+
+  /* ---------- Sections ease in as they arrive ---------- */
+  var revealTargets = document.querySelectorAll(
+    "main .section-head, main .principles > li, main .svc, main .tool-card, main .post, main .samples-head, main .cta-grid, main .band-cards > *, main .faq-item, main .article-body > h2"
+  );
+  if (revealTargets.length && !reduceMotion && "IntersectionObserver" in window) {
+    var vh = window.innerHeight;
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        el.classList.add("is-in");
+        rio.unobserve(el);
+        // Hand the element back to its own hover transitions once it has arrived
+        setTimeout(function () { el.removeAttribute("data-reveal"); el.classList.remove("is-in"); }, 1200);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealTargets.forEach(function (el) {
+      // Anything already on screen at load stays put, so nothing jumps
+      if (el.getBoundingClientRect().top < vh * 0.92) return;
+      el.setAttribute("data-reveal", "");
+      rio.observe(el);
+    });
   }
 
   /* ---------- Services: highlight the section in view ---------- */

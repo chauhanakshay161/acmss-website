@@ -9,9 +9,12 @@ image: /assets/images/og/tools.png
 <link rel="stylesheet" href="/assets/tools/tools.css?v=2">
 
 <section class="page-head">
-  <div class="wrap">
+  <div class="wrap ph-grid">
+    <div class="ph-text">
     <h1>Free tools for the shop floor.</h1>
     <p class="lead">Quick, honest answers to the questions every shop should be able to answer: is this process capable, will this assembly fit, where is the time going, and where should we start? Every tool runs in your browser, so nothing you enter is sent anywhere.</p>
+    </div>
+    <figure class="plate" data-plate="flange" data-title="Free tools" data-note="Runs in your browser" data-dwg="ACMS-TL-001"></figure>
   </div>
 </section>
 
@@ -19,24 +22,28 @@ image: /assets/images/og/tools.png
   <div class="wrap">
     <div class="tool-cards">
       <a class="tool-card" href="/tools/capability-calculator.html">
+        <svg class="card-fig" viewBox="0 0 320 120" aria-hidden="true" focusable="false"><path class="cf-lim" d="M70 14v86M250 14v86"/><path class="cf-base" d="M30 100h260"/><g class="cf-bars"><rect x="118" y="84" width="11" height="16"/><rect x="131" y="68" width="11" height="32"/><rect x="144" y="44" width="11" height="56"/><rect x="157" y="32" width="11" height="68"/><rect x="170" y="46" width="11" height="54"/><rect x="183" y="70" width="11" height="30"/><rect x="196" y="86" width="11" height="14"/></g><path class="cf-acc" d="M104 100C130 98 146 26 162 26S194 98 220 100"/><text class="cf-t" x="70" y="10">LSL</text><text class="cf-t" x="250" y="10">USL</text></svg>
         <p class="label">Calculator</p>
         <h2>Process capability calculator</h2>
         <p>Paste your measurements and limits. Get Cp, Cpk, Pp and Ppk, the expected defect rate, a histogram and a plain-language verdict, including whether the problem is spread, centring or drift.</p>
         <span class="go">Open the calculator</span>
       </a>
       <a class="tool-card" href="/tools/oee-calculator.html">
+        <svg class="card-fig" viewBox="0 0 320 120" aria-hidden="true" focusable="false"><g class="cf-seg"><rect class="cf-good" x="30" y="44" width="148" height="30"/><rect x="180" y="44" width="16" height="30"/><rect x="198" y="44" width="38" height="30"/><rect x="238" y="44" width="52" height="30"/></g><path class="cf-thin" d="M30 30v58M290 30v58"/><text class="cf-t" x="104" y="96">Good output</text><text class="cf-t" x="188" y="36">Q</text><text class="cf-t" x="217" y="36">P</text><text class="cf-t" x="264" y="36">A</text><path class="cf-line" d="M30 24h260"/><text class="cf-t" x="160" y="16">Planned time</text></svg>
         <p class="label">Calculator</p>
         <h2>OEE calculator</h2>
         <p>Availability, performance and quality for one machine or cell over a shift, with the minutes lost to each and which loss to attack first.</p>
         <span class="go">Open the calculator</span>
       </a>
       <a class="tool-card" href="/tools/tolerance-stack-up-calculator.html">
+        <svg class="card-fig" viewBox="0 0 320 120" aria-hidden="true" focusable="false"><path class="cf-line" d="M66 22H280V98H66"/><path class="cf-line" d="M66 22V98"/><g class="cf-bars"><rect x="66" y="36" width="80" height="48"/><rect x="146" y="42" width="56" height="36"/><rect x="202" y="32" width="36" height="56"/></g><rect class="cf-gap" x="238" y="22" width="42" height="76"/><path class="cf-acc" d="M241 60h36M246 55l-5 5 5 5M272 55l5 5-5 5"/><text class="cf-t cf-ta" x="259" y="48">Gap</text><path class="cf-dim" d="M66 108h80M146 108h56M202 108h36M66 103v10M146 103v10M202 103v10M238 103v10"/><text class="cf-t" x="106" y="120">A</text><text class="cf-t" x="174" y="120">B</text><text class="cf-t" x="220" y="120">C</text></svg>
         <p class="label">Calculator</p>
         <h2>Tolerance stack-up calculator</h2>
         <p>Worst-case and RSS ranges for a gap or clearance, a check against your requirement, and which tolerance contributes most.</p>
         <span class="go">Open the calculator</span>
       </a>
       <a class="tool-card" href="/tools/stability-assessment.html">
+        <svg class="card-fig" viewBox="0 0 320 120" aria-hidden="true" focusable="false"><path class="cf-thin" d="M24 26h272M24 94h272"/><path class="cf-line" d="M24 60h272" opacity=".5"/><text class="cf-t" x="290" y="20" text-anchor="end">UCL</text><text class="cf-t" x="290" y="108" text-anchor="end">LCL</text><path class="cf-line" d="M34 62L56 50L78 70L100 56L122 66L144 48L166 64L188 54L210 72L232 58L254 18L276 60"/><g class="cf-pts"><circle cx="34" cy="62" r="2.6"/><circle cx="56" cy="50" r="2.6"/><circle cx="78" cy="70" r="2.6"/><circle cx="100" cy="56" r="2.6"/><circle cx="122" cy="66" r="2.6"/><circle cx="144" cy="48" r="2.6"/><circle cx="166" cy="64" r="2.6"/><circle cx="188" cy="54" r="2.6"/><circle cx="210" cy="72" r="2.6"/><circle cx="232" cy="58" r="2.6"/><circle cx="276" cy="60" r="2.6"/></g><circle class="cf-hit" cx="254" cy="18" r="3.4"/><circle class="cf-acc" cx="254" cy="18" r="9"/></svg>
         <p class="label">Self-assessment</p>
         <h2>How stable is your process?</h2>
         <p>Twelve statements, about three minutes. Score standard work, knowledge risk, measurement and constraint visibility, and get the first three steps to fix your weakest area.</p>
@@ -47,3 +54,4 @@ image: /assets/images/og/tools.png
 </section>
 
 {% include cta.html %}
+<script src="/assets/plate.js?v=1" defer></script>
