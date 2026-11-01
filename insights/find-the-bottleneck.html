@@ -1,0 +1,149 @@
+---
+layout: default
+title: How to Find the Bottleneck in a Machine Shop | AC Manufacturing Solutions
+description: A practical method to find the real production bottleneck: follow the queues, calculate load against available capacity, time the suspected constraint, then use the five focusing steps to raise output without new equipment.
+canonical: /insights/find-the-bottleneck.html
+slug: insights
+og_type: article
+image: /assets/images/og/find-the-bottleneck.png
+---
+<article>
+  <header class="article-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="/insights/">Insights</a><span aria-hidden="true">/</span>Throughput</p>
+      <h1>How to find the real bottleneck in a machine shop.</h1>
+      <p class="article-meta">AC Manufacturing Solutions · Published 1 November 2026 · 7 minute read</p>
+    </div>
+  </header>
+
+  <div class="wrap article-wrap">
+    <div class="article-body">
+      <div class="answer">
+        <p class="label">Short answer</p>
+        <p>The bottleneck is the resource with the least spare capacity compared with the demand placed on it. Find it in three passes: look for where work waits, calculate each resource's load against the hours it is really available, then time the suspect and record every stop. Once you've found it, every hour gained there is an hour gained for the whole shop, and improvements anywhere else add little or nothing to output.</p>
+      </div>
+
+      <h2 id="why">Why the obvious answer is often wrong</h2>
+      <ul class="list">
+        <li><strong>The busiest machine isn't always the constraint.</strong> A machine can look busy because it is making parts nobody needs yet.</li>
+        <li><strong>The constraint moves with product mix.</strong> A week of long-cycle parts can move it from the mill to the lathe.</li>
+        <li><strong>Setups and approvals hide capacity.</strong> A machine with a short cycle time can still be the constraint if it spends a third of its time in setup or waiting for a first-off check.</li>
+        <li><strong>It isn't always a machine.</strong> It can be the CMM, one qualified setter, a heat-treat vendor or the engineering sign-off.</li>
+      </ul>
+
+      <h2 id="step1">Step 1: follow the queues</h2>
+      <p>Walk the routing for one product family at the same time on three different days. Note where work in progress piles up and where operators wait for parts. Work queues in front of the constraint, and the operations after it are often starved. This gives you a suspect, not proof.</p>
+
+      <h2 id="step2">Step 2: calculate load against available capacity</h2>
+      <p>For each resource on the routing, compare the hours the work requires with the hours the resource is actually available.</p>
+      <div class="formula">
+        Load (h) = weekly demand × cycle time per part + setup hours<br>
+        Available (h) = scheduled hours × (1 − typical downtime)<br>
+        Utilization = Load / Available
+      </div>
+      <p>An example for a part family with a demand of 400 parts a week:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Resource</th><th scope="col" class="num">Cycle (min)</th><th scope="col" class="num">Load (h)</th><th scope="col" class="num">Available (h)</th><th scope="col" class="num">Utilization</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Saw</th><td class="num">1.5</td><td class="num">10.0</td><td class="num">40</td><td class="num">25%</td></tr>
+            <tr><th scope="row">CNC mill</th><td class="num">9.0</td><td class="num">68.0</td><td class="num">72</td><td class="num">94%</td></tr>
+            <tr><th scope="row">Deburr</th><td class="num">4.0</td><td class="num">26.7</td><td class="num">40</td><td class="num">67%</td></tr>
+            <tr><th scope="row">CMM</th><td class="num">2.5</td><td class="num">16.7</td><td class="num">40</td><td class="num">42%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The mill's 68 hours are 60 hours of cutting plus four two-hour setups. It runs two shifts, 80 scheduled hours, less 10% for breakdowns and tool changes, which leaves 72. At 94% utilization it has almost no slack. One bad week, or one long setup, and output drops for the whole part family.</p>
+
+      <h2 id="step3">Step 3: time the suspected constraint</h2>
+      <p>Spreadsheets use standard times. Reality has stops. At the suspect operation, time at least 20 consecutive cycles and write down every interruption and its cause: waiting for material, tool changes, first-off approval, operator called away, program edits. The gap between the standard cycle time and the observed rate is usually where the cheapest capacity is.</p>
+      <p>Check three more things while you're there: does it run through breaks and shift changes, does it ever wait for the operation before it, and does it ever process parts that are later scrapped?</p>
+
+      <h2 id="five-steps">Step 4: use the five focusing steps</h2>
+      <p>The theory of constraints gives a simple order of attack:</p>
+      <ol class="list">
+        <li><strong>Identify</strong> the constraint, as above.</li>
+        <li><strong>Exploit</strong> it: get more out of what you already have. Run it through breaks, stage tools and material before the job, move setup work offline, and inspect parts <em>before</em> the constraint so it never machines a bad blank.</li>
+        <li><strong>Subordinate</strong> everything else to it: release work at the pace the constraint can absorb, and never let it starve.</li>
+        <li><strong>Elevate</strong> it only when the first three are done: overtime, a second fixture, outsourcing or a new machine.</li>
+        <li><strong>Repeat</strong>, because once it's broken the constraint moves somewhere else.</li>
+      </ol>
+      <p>Most shops jump straight to step four. Steps two and three are usually cheaper and faster, and they tell you whether the capital spend is even needed.</p>
+
+      <h2 id="measure">How to measure improvement at the constraint</h2>
+      <p>Track output of the constraint per scheduled hour, and the reasons for every lost hour. OEE is useful here, but only at the constraint: improving OEE on a machine with spare capacity doesn't increase shop output. You can work out OEE for a machine with the <a href="/tools/oee-calculator.html">free OEE calculator</a>.</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>Can a shop have more than one bottleneck?</summary><div><p>At any moment, one resource limits each product flow. Different product families can have different constraints, and the constraint can move with mix, so it's worth checking the calculation for your main families separately.</p></div></details>
+        <details><summary>What is a wandering bottleneck?</summary><div><p>A constraint that moves from week to week, usually because product mix, setups or staffing change. It often means two resources are both close to full, so stabilizing setups and scheduling around both is more effective than adding capacity to one.</p></div></details>
+        <details><summary>Should I buy a new machine to fix the bottleneck?</summary><div><p>Only after you have exploited the existing one. Recovering lost time at the constraint, through offline setup, running through breaks and keeping bad parts out of it, can release a meaningful amount of capacity for very little money, and it tells you how much the new machine would really need to add.</p></div></details>
+        <details><summary>Is the bottleneck always a machine?</summary><div><p>No. It can be a person with a unique skill, inspection or CMM time, an outside process such as heat treat or plating, or an approval step such as first-off sign-off.</p></div></details>
+      </div>
+    </div>
+
+    <aside class="article-aside">
+      <div class="aside-card">
+        <p class="label">Engagement</p>
+        <p>We find the real constraint, measure what drives its variation and set out options before you spend on capacity.</p>
+        <a class="go" href="/services.html#bottleneck">Bottleneck analysis</a>
+      </div>
+      <div class="aside-card">
+        <p class="label">Free tool</p>
+        <p>Availability, performance and quality for one machine or cell.</p>
+        <a class="go" href="/tools/oee-calculator.html">OEE calculator</a>
+      </div>
+      <nav class="aside-card toc" aria-label="On this page">
+        <p class="label">On this page</p>
+        <ol>
+          <li><a href="#why">Why guesses are wrong</a></li>
+          <li><a href="#step1">Follow the queues</a></li>
+          <li><a href="#step2">Load versus capacity</a></li>
+          <li><a href="#step3">Time the constraint</a></li>
+          <li><a href="#five-steps">Five focusing steps</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+</article>
+
+<div class="block-tight"></div>
+{% include cta.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to find the real bottleneck in a machine shop",
+      "description": "A practical method to find the real production bottleneck: follow the queues, calculate load against available capacity, time the suspected constraint, then use the five focusing steps.",
+      "image": "https://acmss.ca/assets/images/og/find-the-bottleneck.png",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": { "@id": "https://acmss.ca/#org" },
+      "publisher": { "@id": "https://acmss.ca/#org" },
+      "mainEntityOfPage": "https://acmss.ca/insights/find-the-bottleneck.html",
+      "about": ["Bottleneck analysis", "Theory of constraints", "Manufacturing throughput"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acmss.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://acmss.ca/insights/" },
+        { "@type": "ListItem", "position": 3, "name": "Finding the bottleneck", "item": "https://acmss.ca/insights/find-the-bottleneck.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can a shop have more than one bottleneck?", "acceptedAnswer": { "@type": "Answer", "text": "At any moment, one resource limits each product flow. Different product families can have different constraints, and the constraint can move with mix, so it's worth checking the calculation for your main families separately." } },
+        { "@type": "Question", "name": "What is a wandering bottleneck?", "acceptedAnswer": { "@type": "Answer", "text": "A constraint that moves from week to week, usually because product mix, setups or staffing change. It often means two resources are both close to full." } },
+        { "@type": "Question", "name": "Should I buy a new machine to fix the bottleneck?", "acceptedAnswer": { "@type": "Answer", "text": "Only after you have exploited the existing one. Recovering lost time at the constraint, through offline setup, running through breaks and keeping bad parts out of it, can release a meaningful amount of capacity for very little money, and it tells you how much the new machine would really need to add." } },
+        { "@type": "Question", "name": "Is the bottleneck always a machine?", "acceptedAnswer": { "@type": "Answer", "text": "No. It can be a person with a unique skill, inspection or CMM time, an outside process such as heat treat or plating, or an approval step such as first-off sign-off." } }
+      ]
+    }
+  ]
+}
+</script>

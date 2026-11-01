@@ -1,0 +1,171 @@
+---
+layout: default
+title: First Article Inspection (AS9102) Explained, with a Checklist | AC Manufacturing Solutions
+description: What a first article inspection is, when AS9102 requires a full or partial FAI, what goes on Forms 1, 2 and 3, how to balloon a drawing, and the mistakes that get FAI packages rejected.
+canonical: /insights/first-article-inspection-as9102.html
+slug: insights
+og_type: article
+image: /assets/images/og/first-article-inspection-as9102.png
+---
+<article>
+  <header class="article-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="/insights/">Insights</a><span aria-hidden="true">/</span>Quality</p>
+      <h1>First article inspection (AS9102), explained.</h1>
+      <p class="article-meta">AC Manufacturing Solutions · Published 1 November 2026 · 8 minute read</p>
+    </div>
+  </header>
+
+  <div class="wrap article-wrap">
+    <div class="article-body">
+      <div class="answer">
+        <p class="label">Short answer</p>
+        <p>A first article inspection (FAI) is documented, objective evidence that your production process can make a part that meets every requirement on the drawing and in the purchase order. In aerospace it follows <strong>AS9102</strong>, which uses three forms:</p>
+        <ul>
+          <li><strong>Form 1, part number accountability:</strong> the part, its revision and any sub-assemblies.</li>
+          <li><strong>Form 2, product accountability:</strong> raw materials, special processes and functional tests, with their certifications.</li>
+          <li><strong>Form 3, characteristic accountability:</strong> every design characteristic, numbered on a ballooned drawing, with its requirement and measured result.</li>
+        </ul>
+      </div>
+
+      <h2 id="what">What is a first article inspection for?</h2>
+      <p>An FAI verifies the <strong>process</strong>, not just one part. The first article has to be made with the same machines, tooling, programs, methods and materials you'll use in production. A hand-finished prototype that happens to measure well proves nothing about the next 500 parts.</p>
+      <p>That is why customers ask for a new FAI when something about the process changes, even if the drawing hasn't.</p>
+
+      <h2 id="when">When is an FAI required?</h2>
+      <p>AS9102 calls for a full FAI on the first production run of a new part. After that, a full or partial (delta) FAI is required when something changes that could affect fit, form or function, including:</p>
+      <ul class="list">
+        <li>A change in the design characteristics of the part.</li>
+        <li>A change in manufacturing source, process, inspection method, location of manufacture, tooling or materials.</li>
+        <li>A change to a numerical control program, or moving it to another machine or media.</li>
+        <li>A natural or human-caused event that may affect the manufacturing process.</li>
+        <li>A lapse in production of two years, unless the customer specifies a different period.</li>
+      </ul>
+      <p>A <strong>partial FAI</strong> covers only the characteristics affected by the change. The forms should say clearly why it's partial and which characteristics were re-verified.</p>
+
+      <h2 id="forms">What goes on each AS9102 form?</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Form</th><th scope="col">Purpose</th><th scope="col">Typical contents</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Form 1</th><td>Part number accountability</td><td>Part number and name, drawing revision, serial or lot number, organization and supplier codes, whether the FAI is full or partial and why, sub-assembly part numbers, sign-off</td></tr>
+            <tr><th scope="row">Form 2</th><td>Product accountability</td><td>Each raw material, special process (heat treat, plating, NDT, painting) and functional test, with specification, supplier, certificate of conformance number and whether the supplier is approved where required</td></tr>
+            <tr><th scope="row">Form 3</th><td>Characteristic accountability</td><td>One line per characteristic: balloon number, reference location, characteristic designator, requirement with tolerance, measured result, the tooling or gauge used, and any nonconformance reference</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="ballooning">How to balloon a drawing</h2>
+      <p>Ballooning means numbering every requirement on the drawing so each one appears exactly once on Form 3. The most common failure is missing characteristics, so be thorough:</p>
+      <ul class="list">
+        <li>Every dimension and its tolerance, including basic dimensions used by GD&amp;T controls.</li>
+        <li>Every geometric tolerance in its feature control frame, with its datum references.</li>
+        <li>Surface finish, edge breaks, thread callouts and hole callouts, each as its own characteristic.</li>
+        <li>Every drawing note and flag note, including general notes in the title block, such as default tolerances and "break all sharp edges".</li>
+        <li>Requirements from specifications the drawing references, such as a plating thickness or a marking method.</li>
+      </ul>
+      <p>Number in a consistent order, for example clockwise from the top left of each sheet, and record the sheet and zone for each balloon so a reviewer can find it.</p>
+
+      <h2 id="results">How should results be recorded?</h2>
+      <ul class="list">
+        <li><strong>Variable characteristics</strong> get the actual measured value, in the drawing's units. "OK" or a tick is not a result for a dimension.</li>
+        <li><strong>Attribute characteristics</strong>, such as a note or a visual requirement, can be recorded as conforming, with the method of verification.</li>
+        <li>Record the gauge or method for each characteristic, and make sure every instrument used was calibrated and capable of the tolerance.</li>
+        <li>Anything out of tolerance needs a nonconformance reference and a disposition before the FAI is complete.</li>
+      </ul>
+
+      <h2 id="rejected">Why FAI packages get rejected</h2>
+      <ol class="list">
+        <li><strong>Missing characteristics:</strong> usually notes, general tolerances or requirements buried in referenced specs.</li>
+        <li><strong>Revision mismatch:</strong> the FAI was done to a different drawing or purchase order revision than the one on the order.</li>
+        <li><strong>Material or process certificates that don't match:</strong> wrong specification, wrong heat or lot, or a special process from a source the customer hasn't approved.</li>
+        <li><strong>Unusable results:</strong> "OK" for dimensions, missing units, or results that can't be traced to a calibrated gauge.</li>
+        <li><strong>Not representative of production:</strong> the part was made on a different machine, program or method than production will use.</li>
+      </ol>
+
+      <h2 id="checklist">FAI checklist</h2>
+      <ol class="list">
+        <li>Confirm the drawing and purchase order revisions, and the customer's FAI requirements and forms.</li>
+        <li>Make the first article on the production process, with production tooling and programs.</li>
+        <li>Balloon every characteristic, note and referenced requirement.</li>
+        <li>Collect material, special process and test certificates and check them against the specifications.</li>
+        <li>Measure and record actual values with calibrated, capable gauges.</li>
+        <li>Disposition any nonconformance before sign-off.</li>
+        <li>Complete Forms 1, 2 and 3, review the package independently, then sign and submit.</li>
+      </ol>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>Is a first article inspection the same as PPAP?</summary><div><p>No. FAI under AS9102 is the aerospace standard for verifying the first production part. PPAP (Production Part Approval Process) is the automotive equivalent from AIAG and is broader: it also covers process flow, FMEA, control plans, measurement system analysis and capability studies.</p></div></details>
+        <details><summary>Can an FAI be done on a prototype?</summary><div><p>Not a valid one. The first article has to be produced with the production process, tooling and methods. A prototype inspection can be useful, but it doesn't satisfy AS9102.</p></div></details>
+        <details><summary>What is a partial or delta FAI?</summary><div><p>A partial FAI re-verifies only the characteristics affected by a change, such as a new revision, a new machine or a new material source. It still needs Forms 1 to 3, with the reason for the partial FAI stated.</p></div></details>
+        <details><summary>When does an FAI need to be repeated?</summary><div><p>When the design, the manufacturing source, process, location, tooling, materials or NC program change in a way that could affect fit, form or function, after an event that may affect the process, or after a two-year lapse in production unless the customer specifies otherwise.</p></div></details>
+      </div>
+    </div>
+
+    <aside class="article-aside">
+      <div class="aside-card">
+        <p class="label">Fixed-price package</p>
+        <p>Send the drawing, requirements and your measurements. Get a ballooned drawing and an AS9102-style report.</p>
+        <a class="go" href="/services.html#packages">See the FAI package</a>
+      </div>
+      <div class="aside-card">
+        <p class="label">Related</p>
+        <p>Is the process behind your first article capable of repeating it?</p>
+        <a class="go" href="/tools/capability-calculator.html">Check its Cpk</a>
+      </div>
+      <nav class="aside-card toc" aria-label="On this page">
+        <p class="label">On this page</p>
+        <ol>
+          <li><a href="#when">When an FAI is required</a></li>
+          <li><a href="#forms">Forms 1, 2 and 3</a></li>
+          <li><a href="#ballooning">Ballooning a drawing</a></li>
+          <li><a href="#results">Recording results</a></li>
+          <li><a href="#rejected">Why FAIs get rejected</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+</article>
+
+<div class="block-tight"></div>
+{% include cta.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "First article inspection (AS9102), explained",
+      "description": "What a first article inspection is, when AS9102 requires a full or partial FAI, what goes on Forms 1, 2 and 3, how to balloon a drawing, and the mistakes that get FAI packages rejected.",
+      "image": "https://acmss.ca/assets/images/og/first-article-inspection-as9102.png",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": { "@id": "https://acmss.ca/#org" },
+      "publisher": { "@id": "https://acmss.ca/#org" },
+      "mainEntityOfPage": "https://acmss.ca/insights/first-article-inspection-as9102.html",
+      "about": ["First article inspection", "AS9102", "Aerospace quality"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acmss.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://acmss.ca/insights/" },
+        { "@type": "ListItem", "position": 3, "name": "First article inspection (AS9102)", "item": "https://acmss.ca/insights/first-article-inspection-as9102.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is a first article inspection the same as PPAP?", "acceptedAnswer": { "@type": "Answer", "text": "No. FAI under AS9102 is the aerospace standard for verifying the first production part. PPAP is the automotive equivalent from AIAG and is broader: it also covers process flow, FMEA, control plans, measurement system analysis and capability studies." } },
+        { "@type": "Question", "name": "Can an FAI be done on a prototype?", "acceptedAnswer": { "@type": "Answer", "text": "Not a valid one. The first article has to be produced with the production process, tooling and methods. A prototype inspection can be useful, but it doesn't satisfy AS9102." } },
+        { "@type": "Question", "name": "What is a partial or delta FAI?", "acceptedAnswer": { "@type": "Answer", "text": "A partial FAI re-verifies only the characteristics affected by a change, such as a new revision, a new machine or a new material source. It still needs Forms 1 to 3, with the reason for the partial FAI stated." } },
+        { "@type": "Question", "name": "When does an FAI need to be repeated?", "acceptedAnswer": { "@type": "Answer", "text": "When the design, the manufacturing source, process, location, tooling, materials or NC program change in a way that could affect fit, form or function, after an event that may affect the process, or after a two-year lapse in production unless the customer specifies otherwise." } }
+      ]
+    }
+  ]
+}
+</script>

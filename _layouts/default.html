@@ -6,36 +6,92 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}">
   <link rel="canonical" href="https://acmss.ca{{ page.canonical }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#07111C">
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
   <meta property="og:site_name" content="AC Manufacturing Solutions">
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:url" content="https://acmss.ca{{ page.canonical }}">
+  <meta property="og:image" content="https://acmss.ca{{ page.image | default: '/assets/images/og/default.png' }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ page.title }}">
   <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="https://acmss.ca{{ page.image | default: '/assets/images/og/default.png' }}">
 
   <script>
     document.documentElement.classList.add("js");
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("no-scrolly");
   </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
-  <link rel="stylesheet" href="/assets/style.css?v=5">
+  <link rel="icon" href="/assets/images/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Site summary for AI assistants">
+  <link rel="preload" href="/assets/fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/style.css?v=6">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "AC Manufacturing Solutions",
-    "url": "https://acmss.ca/",
-    "email": "hello@acmss.ca",
-    "description": "Process standardization, throughput analysis and quality documentation for small and mid-size manufacturers.",
-    "areaServed": ["Ottawa", "Eastern Ontario"],
-    "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" },
-    "sameAs": ["https://www.linkedin.com/company/acmanufacturingsolutions/"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://acmss.ca/#org",
+        "name": "AC Manufacturing Solutions",
+        "url": "https://acmss.ca/",
+        "logo": { "@type": "ImageObject", "url": "https://acmss.ca/assets/images/icon-512.png", "width": 512, "height": 512 },
+        "email": "hello@acmss.ca",
+        "sameAs": ["https://www.linkedin.com/company/acmanufacturingsolutions/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://acmss.ca/#website",
+        "url": "https://acmss.ca/",
+        "name": "AC Manufacturing Solutions",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://acmss.ca/#org" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://acmss.ca/#business",
+        "name": "AC Manufacturing Solutions",
+        "url": "https://acmss.ca/",
+        "image": "https://acmss.ca/assets/images/og/default.png",
+        "logo": "https://acmss.ca/assets/images/icon-512.png",
+        "email": "hello@acmss.ca",
+        "description": "Process standardization, throughput and bottleneck analysis, capability studies, first article inspection packages and manufacturing documentation for small and mid-size manufacturers in Ottawa and Eastern Ontario.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" },
+        "areaServed": [
+          { "@type": "City", "name": "Ottawa" },
+          { "@type": "AdministrativeArea", "name": "Eastern Ontario" },
+          { "@type": "Country", "name": "Canada" }
+        ],
+        "knowsAbout": ["Process capability", "Cp and Cpk", "Statistical process control", "First article inspection", "AS9102", "GD&T", "Tolerance stack-up analysis", "Standard work", "SOPs and work instructions", "Setup sheets", "Bottleneck analysis", "Theory of constraints", "OEE", "CMM metrology", "ISO 9001", "AS9100", "Manufacturing readiness", "CNC process development"],
+        "parentOrganization": { "@id": "https://acmss.ca/#org" },
+        "sameAs": ["https://www.linkedin.com/company/acmanufacturingsolutions/"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Engagements and fixed-price packages",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Process standardization and throughput stabilization", "url": "https://acmss.ca/services.html#standardization" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manufacturing readiness and process industrialization", "url": "https://acmss.ca/services.html#readiness" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Throughput, capacity and bottleneck analysis", "url": "https://acmss.ca/services.html#bottleneck" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Documentation and knowledge capture", "url": "https://acmss.ca/services.html#knowledge" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation and capital decision support", "url": "https://acmss.ca/services.html#automation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "First article inspection package (AS9102 style)", "url": "https://acmss.ca/services.html#packages" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Process capability study", "url": "https://acmss.ca/services.html#packages" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Setup sheets and work instructions", "url": "https://acmss.ca/services.html#packages" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drawing and tolerance review", "url": "https://acmss.ca/services.html#packages" } }
+          ]
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -50,6 +106,6 @@
 
   {% include footer.html %}
 
-  <script src="/assets/site.js?v=5" defer></script>
+  <script src="/assets/site.js?v=6" defer></script>
 </body>
 </html>

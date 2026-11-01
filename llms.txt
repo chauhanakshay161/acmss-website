@@ -1,0 +1,34 @@
+# AC Manufacturing Solutions
+
+> AC Manufacturing Solutions (acmss.ca) helps small and mid-size manufacturers in Ottawa and Eastern Ontario, Canada, make their processes repeatable: process standardization, throughput and bottleneck analysis, knowledge capture, manufacturing readiness, and fixed-price quality packages such as AS9102-style first article inspection reports and process capability studies. It is led by a Certified Engineering Technologist (CET) with a background in precision manufacturing, CNC process development, first article inspection, GD&T and CMM metrology. It does not provide services that require a licensed professional engineer.
+
+Contact: hello@acmss.ca. Intro calls are 15 to 30 minutes. On-site work covers Ottawa and Eastern Ontario; fixed-price packages can be done remotely anywhere in Canada.
+
+## Services
+
+- [Services overview](https://acmss.ca/services.html): five scoped engagements and five fixed-price packages, each with problem, deliverables and what it is not.
+- [Process standardization and throughput stabilization](https://acmss.ca/services.html#standardization): SOPs, setup sheets and work instructions for critical operations, stability assessment and an improvement roadmap.
+- [Throughput, capacity and bottleneck analysis](https://acmss.ca/services.html#bottleneck): finds the real constraint and what drives its variation before overtime, outsourcing or capital decisions.
+- [Documentation and knowledge capture](https://acmss.ca/services.html#knowledge): captures process knowledge held by a few people.
+- [Fixed-price packages](https://acmss.ca/services.html#packages): setup sheets, first article inspection package, capability study, drawing and tolerance review, CAD from an existing part.
+- [FAQ](https://acmss.ca/faq.html): pricing approach, on-site and remote work, confidentiality, ISO 9001 and AS9100 support, scope limits.
+
+## Free tools (run in the browser, no data is sent)
+
+- [Process capability calculator](https://acmss.ca/tools/capability-calculator.html): Cp, Cpk, Pp, Ppk, expected ppm, 95% confidence interval for Cpk, histogram and plain-language findings.
+- [OEE calculator](https://acmss.ca/tools/oee-calculator.html): availability, performance, quality and OEE for one shift, with minutes lost to each.
+- [Tolerance stack-up calculator](https://acmss.ca/tools/tolerance-stack-up-calculator.html): 1D worst-case and RSS stack-up with requirement check and contribution analysis.
+- [Process stability self-assessment](https://acmss.ca/tools/stability-assessment.html): 12 statements scoring standard work, knowledge risk, measurement and constraint visibility.
+
+## Guides
+
+- [What is a good Cpk? Cp, Cpk, Pp and Ppk explained](https://acmss.ca/insights/cpk-explained.html): formulas, thresholds (1.33 and 1.67), ppm by Cpk, sample size and confidence, Cpk versus Ppk.
+- [First article inspection (AS9102), explained](https://acmss.ca/insights/first-article-inspection-as9102.html): when a full or partial FAI is required, Forms 1 to 3, ballooning, common rejection reasons, checklist.
+- [How to find the real bottleneck in a machine shop](https://acmss.ca/insights/find-the-bottleneck.html): queues, load versus available capacity, timing the constraint, five focusing steps.
+- [How to capture tribal knowledge](https://acmss.ca/insights/capture-tribal-knowledge.html): prioritizing, key points and reasons (TWI Job Instruction), setup sheet contents, validation.
+
+## About
+
+- [About](https://acmss.ca/about.html): how the work is done and the credentials behind it.
+- [Book an intro call](https://acmss.ca/book-now.html)
+- [Contact](https://acmss.ca/contact.html)
