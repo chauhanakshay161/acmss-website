@@ -51,7 +51,7 @@
         menuBtn.focus();
       }
     });
-    window.matchMedia("(min-width: 861px)").addEventListener("change", function (m) {
+    window.matchMedia("(min-width: 1001px)").addEventListener("change", function (m) {
       if (m.matches) setMenu(false);
     });
   }
@@ -94,6 +94,12 @@
   var form = document.querySelector("[data-form]");
   if (form) {
     form.setAttribute("novalidate", "");
+    // Prefill the message when arriving from one of the free tools
+    try {
+      var pre = new URLSearchParams(window.location.search).get("message");
+      var msgEl = form.querySelector("#message");
+      if (pre && msgEl && !msgEl.value) msgEl.value = pre.slice(0, 2000) + "\n";
+    } catch (err) {}
     var check = function (field) {
       var input = field.querySelector("input, textarea");
       var ok = input.checkValidity();

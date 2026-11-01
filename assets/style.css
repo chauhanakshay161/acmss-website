@@ -258,6 +258,7 @@ h3 {
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav a:not(.btn) {
   position: relative;
+  white-space: nowrap;
   padding: 10px 16px;
   color: var(--steel-300);
   font-size: 16px;
@@ -328,9 +329,12 @@ h3 {
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .nav { display: none; }
   .menu-btn { display: inline-flex; }
+}
+
+@media (max-width: 900px) {
   .header-row, .header-space { height: 76px; }
   .logo { width: 196px; }
   .mobile-menu { padding-top: 96px; }
@@ -830,3 +834,15 @@ h3 {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
+
+/* ---------- Free tools band (home) ---------- */
+
+.tools-band { padding-bottom: 0; }
+.band-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--col-gap); margin-top: clamp(40px, 4vw, 64px); }
+.band-card { display: flex; flex-direction: column; gap: 12px; padding: clamp(26px, 2.8vw, 40px); border: 1px solid var(--hair-2); border-radius: var(--r-s); background: linear-gradient(180deg, rgba(12, 26, 42, .7), rgba(12, 26, 42, 0)); text-decoration: none; transition: border-color .4s var(--ease), transform .6s var(--ease); }
+.band-card:hover { border-color: var(--steel-300); transform: translateY(-3px); }
+.band-card .label { color: var(--orange-hi); }
+.band-title { font-size: clamp(24px, 1.2vw + 16px, 34px); font-weight: 310; font-stretch: 120%; letter-spacing: -.03em; line-height: 1.1; color: var(--steel-100); }
+.band-title::after { content: "\00a0\2192"; color: var(--orange); }
+.band-text { color: var(--steel-300); }
+@media (max-width: 760px) { .band-cards { grid-template-columns: minmax(0, 1fr); } }
