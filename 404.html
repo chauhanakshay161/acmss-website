@@ -1,29 +1,19 @@
 ---
+layout: default
+title: Page not found | AC Manufacturing Solutions
+description: The page you were looking for isn't here.
+canonical: /404.html
+slug: notfound
+permalink: /404.html
 ---
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page Not Found | AC Manufacturing Solutions</title>
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-</head>
-<body>
-
-  {% include header.html %}
-
-  <main>
-    <div class="card">
-      <h2 style="margin-top:0;">Page not found</h2>
-      <p class="muted">
-        The link may be broken or the page may have moved.
-      </p>
-      <a class="btn" href="{{ '/' | relative_url }}">Go to Home</a>
-      <a style="margin-left:12px;" href="{{ '/contact.html' | relative_url }}">Contact</a>
+<section class="simple">
+  <div class="wrap">
+    <h1>This page isn't here.</h1>
+    <p class="lead">The link may be out of date or the page may have moved. Try one of these instead.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/">Go to the home page</a>
+      <a class="btn btn-line" href="/services.html">See services</a>
+      <a class="text-link" href="/contact.html">Contact us</a>
     </div>
-  </main>
-
-  {% include footer.html %}
-
-</body>
-</html>
+  </div>
+</section>
