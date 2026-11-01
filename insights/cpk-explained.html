@@ -1,0 +1,207 @@
+---
+layout: default
+title: What Is a Good Cpk? Cp, Cpk, Pp and Ppk Explained | AC Manufacturing Solutions
+description: What Cp, Cpk, Pp and Ppk measure, the formulas, what a good Cpk is (1.33 and 1.67), what each value means in defects per million, how many readings you need, and how to improve it.
+canonical: /insights/cpk-explained.html
+slug: insights
+og_type: article
+image: /assets/images/og/cpk-explained.png
+---
+<article>
+  <header class="article-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="/insights/">Insights</a><span aria-hidden="true">/</span>Process capability</p>
+      <h1>What is a good Cpk? Cp, Cpk, Pp and Ppk explained.</h1>
+      <p class="article-meta">AC Manufacturing Solutions · Published 1 November 2026 · 8 minute read</p>
+    </div>
+  </header>
+
+  <div class="wrap article-wrap">
+    <div class="article-body">
+      <div class="answer">
+        <p class="label">Short answer</p>
+        <p>Cpk measures how well a process fits inside its tolerance, taking into account where the process is actually running. A Cpk of <strong>1.33</strong> is the common minimum for production. <strong>1.67</strong> is typical for new or safety-critical characteristics. Below <strong>1.00</strong> the process is not capable and will make parts outside the tolerance.</p>
+        <ul>
+          <li>Cp and Cpk use short-term (within) variation. Pp and Ppk use overall variation.</li>
+          <li>Cpk is never higher than Cp. They are equal only when the process is centred.</li>
+          <li>A Cpk is only meaningful if the process is stable, the data are roughly normal and the gauge is good enough.</li>
+        </ul>
+      </div>
+
+      <h2 id="four">What do Cp, Cpk, Pp and Ppk each measure?</h2>
+      <p>All four compare the spread of the process with the width of the tolerance. They differ in two ways: whether they care where the process is centred, and which estimate of variation they use.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Index</th><th scope="col">Question it answers</th><th scope="col">Variation used</th><th scope="col">Accounts for centring</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cp</th><td>Could the process fit inside the tolerance if it were perfectly centred?</td><td>Within</td><td>No</td></tr>
+            <tr><th scope="row">Cpk</th><td>Does it fit where it actually runs?</td><td>Within</td><td>Yes</td></tr>
+            <tr><th scope="row">Pp</th><td>Could it fit over the long run, including drift?</td><td>Overall</td><td>No</td></tr>
+            <tr><th scope="row">Ppk</th><td>Does it fit over the long run, where it actually runs?</td><td>Overall</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="formulas">The formulas</h2>
+      <p>With USL and LSL the upper and lower specification limits, μ the process mean and σ the standard deviation:</p>
+      <div class="formula">
+        Cp = (USL − LSL) / 6σ<sub>within</sub><br>
+        Cpk = min(USL − μ, μ − LSL) / 3σ<sub>within</sub><br>
+        Pp = (USL − LSL) / 6σ<sub>overall</sub><br>
+        Ppk = min(USL − μ, μ − LSL) / 3σ<sub>overall</sub>
+      </div>
+      <p><strong>Within sigma</strong> is estimated from short-term variation: the average moving range divided by 1.128 for individual readings, or the average subgroup range divided by the d<sub>2</sub> constant for subgroups (2.326 for a subgroup of five). <strong>Overall sigma</strong> is the ordinary sample standard deviation of all the readings.</p>
+      <p>For a one-sided tolerance, such as a maximum flatness or runout, only the side with a limit counts. Use Cpu = (USL − μ) / 3σ or Cpl = (μ − LSL) / 3σ. Cp has no meaning without two limits.</p>
+
+      <h2 id="good">What is a good Cpk?</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Cpk</th><th scope="col">Verdict</th><th scope="col">Typical use</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Below 1.00</th><td>Not capable</td><td>Every part needs inspection, and some will still escape</td></tr>
+            <tr><th scope="row">1.00 to 1.33</th><td>Marginal</td><td>Fits, but with no room for tool wear, a new operator or a material change</td></tr>
+            <tr><th scope="row">1.33</th><td>Capable</td><td>The most common customer minimum for production characteristics</td></tr>
+            <tr><th scope="row">1.67 and above</th><td>Capable with margin</td><td>Often required for new processes, key and safety-critical characteristics</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Customer requirements win over any rule of thumb. Automotive and aerospace customers usually state the minimum Cpk or Ppk, and whether it applies to a preliminary study or ongoing production, in their quality requirements.</p>
+
+      <h2 id="ppm">What does each Cpk mean in defects?</h2>
+      <p>If the data are normal, Cpk tells you how many standard deviations sit between the mean and the nearest limit (three times the Cpk). That converts directly into an expected defect rate.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col">Cpk</th><th scope="col" class="num">Sigma to nearest limit</th><th scope="col" class="num">Out of spec, one side (ppm)</th><th scope="col" class="num">Both sides if centred (ppm)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">0.67</th><td class="num">2</td><td class="num">22,750</td><td class="num">45,500</td></tr>
+            <tr><th scope="row">1.00</th><td class="num">3</td><td class="num">1,350</td><td class="num">2,700</td></tr>
+            <tr><th scope="row">1.33</th><td class="num">4</td><td class="num">32</td><td class="num">63</td></tr>
+            <tr><th scope="row">1.67</th><td class="num">5</td><td class="num">0.29</td><td class="num">0.57</td></tr>
+            <tr><th scope="row">2.00</th><td class="num">6</td><td class="num">0.001</td><td class="num">0.002</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The tails of a real process are rarely as clean as a normal curve, so treat these as orders of magnitude rather than predictions.</p>
+
+      <h2 id="example">A worked example</h2>
+      <p>A bore is toleranced Ø25.000 ±0.020 mm, so LSL is 24.980 and USL is 25.020. Fifty readings in subgroups of five give a mean of 25.0035 mm and a within sigma of 0.0035 mm.</p>
+      <div class="formula">
+        Cp = (25.020 − 24.980) / (6 × 0.0035) = 0.040 / 0.021 = 1.90<br>
+        Cpu = (25.020 − 25.0035) / (3 × 0.0035) = 0.0165 / 0.0105 = 1.57<br>
+        Cpl = (25.0035 − 24.980) / (3 × 0.0035) = 0.0235 / 0.0105 = 2.24<br>
+        Cpk = min(1.57, 2.24) = 1.57
+      </div>
+      <p>The process is capable, but it runs 0.0035 mm above nominal. Centring it would lift Cpk to the Cp of 1.90 without reducing variation at all, which is usually the cheapest improvement available. You can run this exact data set in the <a href="/tools/capability-calculator.html">free capability calculator</a> with the "Try sample data" button. It shows 1.91 and 1.58 because it doesn't round the intermediate values.</p>
+
+      <h2 id="sample-size">How many readings do you need?</h2>
+      <p>Fewer than you'd hope is never enough. A Cpk from a small sample has a wide margin of error. For a calculated Cpk of 1.33, the approximate 95% confidence range is:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th scope="col" class="num">Readings</th><th scope="col">True Cpk is likely between</th></tr></thead>
+          <tbody>
+            <tr><th scope="row" class="num">30</th><td>0.97 and 1.69</td></tr>
+            <tr><th scope="row" class="num">50</th><td>1.05 and 1.61</td></tr>
+            <tr><th scope="row" class="num">100</th><td>1.13 and 1.53</td></tr>
+            <tr><th scope="row" class="num">125</th><td>1.15 and 1.51</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Thirty readings is a practical minimum for a first look. For a study you'll show a customer, 100 or more collected over several setups, shifts or material lots gives a number you can defend.</p>
+
+      <h2 id="cpk-vs-ppk">Why is Ppk lower than Cpk?</h2>
+      <p>Cpk only sees variation inside each subgroup or between consecutive parts. Ppk sees everything, including shifts between setups, tool changes, operators and material lots. If Ppk is much lower than Cpk, the process isn't stable over time. That is a process control problem, not a machine capability problem, and the fix is usually standard work: the same setup method, the same offsets strategy and the same checks on every shift.</p>
+
+      <h2 id="before-you-trust">Three things to check before you trust a Cpk</h2>
+      <ol class="list">
+        <li><strong>Stability.</strong> Plot the readings in production order on a control chart. If points trend, jump or cycle, the process isn't stable and no single capability number describes it.</li>
+        <li><strong>Normality.</strong> Cpk assumes a roughly normal distribution. Features bounded at zero, such as flatness, runout, position and surface finish, are often skewed and need a different method.</li>
+        <li><strong>The gauge.</strong> If measurement variation is a large share of the tolerance, you are measuring the gauge as much as the process. A common rule of thumb from gauge R&amp;R studies is under 10% of tolerance is good, 10 to 30% may be acceptable, and over 30% is not.</li>
+      </ol>
+
+      <h2 id="improve">How to improve Cpk</h2>
+      <ol class="list">
+        <li><strong>Centre the process.</strong> If Cp is well above Cpk, adjust the mean toward nominal first. It costs an offset change.</li>
+        <li><strong>Remove special causes of variation.</strong> Look at what changes between good and bad periods: setups, tools, fixtures, material, temperature, operators.</li>
+        <li><strong>Reduce common-cause variation.</strong> Better workholding, toolpaths, tool wear control or a more capable machine.</li>
+        <li><strong>Review the tolerance.</strong> Sometimes the tolerance is tighter than the function needs. A drawing review with the designer can be the fastest way to a capable process.</li>
+      </ol>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>Is a Cpk of 1.33 good?</summary><div><p>Yes, for most production characteristics. 1.33 means the nearest limit is four standard deviations from the mean, or roughly 32 parts per million out of spec on that side if the data are normal. Many customers require 1.67 for new processes or safety-critical features.</p></div></details>
+        <details><summary>Can Cpk be higher than Cp?</summary><div><p>No. Cpk equals Cp when the process is perfectly centred and is lower whenever it isn't. If your software shows Cpk above Cp, check the inputs.</p></div></details>
+        <details><summary>Can Cpk be negative?</summary><div><p>Yes. A negative Cpk means the process mean is outside the specification limits, so more than half of the parts are out of tolerance.</p></div></details>
+        <details><summary>What is the difference between Cpk and Ppk?</summary><div><p>Both account for centring. Cpk uses short-term variation within subgroups, so it shows what the process can do. Ppk uses overall variation, including drift between setups and lots, so it shows what the process actually delivered.</p></div></details>
+        <details><summary>How many samples do I need for a capability study?</summary><div><p>At least 30 consecutive readings for a first look, and 100 or more spread over several setups, shifts or lots for a formal study. With 30 readings, a calculated Cpk of 1.33 could really be anywhere from about 0.97 to 1.69.</p></div></details>
+      </div>
+    </div>
+
+    <aside class="article-aside">
+      <div class="aside-card">
+        <p class="label">Free tool</p>
+        <p>Paste your readings and limits to get Cp, Cpk, Pp, Ppk and a plain-language verdict.</p>
+        <a class="go" href="/tools/capability-calculator.html">Open the calculator</a>
+      </div>
+      <div class="aside-card">
+        <p class="label">Fixed-price package</p>
+        <p>A capability study you can hand to a customer, with stability, normality and gauge checks.</p>
+        <a class="go" href="/services.html#packages">See the package</a>
+      </div>
+      <nav class="aside-card toc" aria-label="On this page">
+        <p class="label">On this page</p>
+        <ol>
+          <li><a href="#four">The four indices</a></li>
+          <li><a href="#formulas">Formulas</a></li>
+          <li><a href="#good">What is a good Cpk?</a></li>
+          <li><a href="#ppm">Cpk and defect rates</a></li>
+          <li><a href="#example">Worked example</a></li>
+          <li><a href="#sample-size">Sample size</a></li>
+          <li><a href="#cpk-vs-ppk">Cpk versus Ppk</a></li>
+          <li><a href="#improve">Improving Cpk</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+</article>
+
+<div class="block-tight"></div>
+{% include cta.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What is a good Cpk? Cp, Cpk, Pp and Ppk explained",
+      "description": "What Cp, Cpk, Pp and Ppk measure, the formulas, what a good Cpk is, what each value means in defects per million, how many readings you need, and how to improve it.",
+      "image": "https://acmss.ca/assets/images/og/cpk-explained.png",
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "author": { "@id": "https://acmss.ca/#org" },
+      "publisher": { "@id": "https://acmss.ca/#org" },
+      "mainEntityOfPage": "https://acmss.ca/insights/cpk-explained.html",
+      "about": ["Process capability", "Cpk", "Statistical process control"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acmss.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://acmss.ca/insights/" },
+        { "@type": "ListItem", "position": 3, "name": "Cp, Cpk, Pp and Ppk explained", "item": "https://acmss.ca/insights/cpk-explained.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is a Cpk of 1.33 good?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for most production characteristics. 1.33 means the nearest limit is four standard deviations from the mean, or roughly 32 parts per million out of spec on that side if the data are normal. Many customers require 1.67 for new processes or safety-critical features." } },
+        { "@type": "Question", "name": "Can Cpk be higher than Cp?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cpk equals Cp when the process is perfectly centred and is lower whenever it isn't." } },
+        { "@type": "Question", "name": "Can Cpk be negative?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A negative Cpk means the process mean is outside the specification limits, so more than half of the parts are out of tolerance." } },
+        { "@type": "Question", "name": "What is the difference between Cpk and Ppk?", "acceptedAnswer": { "@type": "Answer", "text": "Both account for centring. Cpk uses short-term variation within subgroups, so it shows what the process can do. Ppk uses overall variation, including drift between setups and lots, so it shows what the process actually delivered." } },
+        { "@type": "Question", "name": "How many samples do I need for a capability study?", "acceptedAnswer": { "@type": "Answer", "text": "At least 30 consecutive readings for a first look, and 100 or more spread over several setups, shifts or lots for a formal study. With 30 readings, a calculated Cpk of 1.33 could really be anywhere from about 0.97 to 1.69." } }
+      ]
+    }
+  ]
+}
+</script>

@@ -1,0 +1,132 @@
+---
+layout: default
+title: OEE Calculator (Availability × Performance × Quality) | AC Manufacturing Solutions
+description: Free OEE calculator. Enter shift length, downtime, ideal cycle time, total parts and rejects to get availability, performance, quality and OEE, with the minutes lost to each and where to start.
+canonical: /tools/oee-calculator.html
+slug: tools
+image: /assets/images/og/oee-calculator.png
+---
+<link rel="stylesheet" href="/assets/tools/tools.css?v=2">
+
+<section class="page-head tool-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="/tools/">Free tools</a><span aria-hidden="true">/</span>OEE</p>
+    <h1>OEE calculator.</h1>
+    <p class="lead">Overall equipment effectiveness for one machine or cell over one shift. See availability, performance and quality, how many minutes each one cost you, and which loss to attack first. Runs in your browser.</p>
+  </div>
+</section>
+
+<section class="block flush-top" data-oee-tool>
+  <div class="wrap grid tool-grid">
+    <form class="panel tool-input" data-oee-form novalidate>
+      <h2 class="tool-h">One shift</h2>
+      <div class="row">
+        <div class="field"><label for="oee-shift">Shift length <span class="opt">(min)</span></label><input id="oee-shift" type="text" inputmode="decimal" autocomplete="off" placeholder="480"></div>
+        <div class="field"><label for="oee-breaks">Planned breaks <span class="opt">(min)</span></label><input id="oee-breaks" type="text" inputmode="decimal" autocomplete="off" placeholder="30"></div>
+      </div>
+      <div class="field">
+        <label for="oee-down">Unplanned downtime <span class="opt">(min)</span></label>
+        <input id="oee-down" type="text" inputmode="decimal" autocomplete="off">
+        <p class="hint">Breakdowns, setups and changeovers, waiting for material, operators or approval.</p>
+      </div>
+      <div class="field">
+        <label for="oee-cycle">Ideal cycle time <span class="opt">(seconds per part)</span></label>
+        <input id="oee-cycle" type="text" inputmode="decimal" autocomplete="off">
+        <p class="hint">The fastest cycle the process can sustain for this part, not the average.</p>
+      </div>
+      <div class="row">
+        <div class="field"><label for="oee-total">Total parts made</label><input id="oee-total" type="text" inputmode="numeric" autocomplete="off"></div>
+        <div class="field"><label for="oee-rejects">Rejected parts <span class="opt">(scrap and rework)</span></label><input id="oee-rejects" type="text" inputmode="numeric" autocomplete="off"></div>
+      </div>
+      <p class="tool-error" role="alert" data-oee-error hidden></p>
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Calculate</button>
+        <button class="btn btn-line" type="button" data-oee-sample>Try sample data</button>
+        <button class="text-btn" type="button" data-oee-clear>Clear</button>
+      </div>
+    </form>
+
+    <div class="tool-output" aria-live="polite">
+      <div class="tool-empty" data-oee-empty>
+        <p class="label">Results</p>
+        <p>Enter one shift of data, or try the sample: an eight-hour shift with 30 minutes of breaks, 47 minutes of unplanned stops, a 60 second ideal cycle, 330 parts and 9 rejects.</p>
+      </div>
+      <div data-oee-out hidden>
+        <div class="kpis">
+          <div class="kpi kpi-main"><p class="label">OEE</p><p class="kpi-value" data-o="oee"></p></div>
+          <div class="kpi"><p class="label">Availability</p><p class="kpi-value small" data-o="A"></p></div>
+          <div class="kpi"><p class="label">Performance</p><p class="kpi-value small" data-o="P"></p></div>
+          <div class="kpi"><p class="label">Quality</p><p class="kpi-value small" data-o="Q"></p></div>
+        </div>
+
+        <figure class="chart oee-chart">
+          <p class="label">Where the planned time went</p>
+          <div class="stack" role="img" aria-label="Planned time split into good output, quality loss, performance loss and availability loss">
+            <i class="s-good" data-w="fully"></i><i class="s-q" data-w="lossQ"></i><i class="s-p" data-w="lossP"></i><i class="s-a" data-w="lossA"></i>
+          </div>
+          <ul class="legend">
+            <li><i class="s-good"></i>Good parts at ideal rate</li>
+            <li><i class="s-q"></i>Quality loss <span data-o="lossQ"></span></li>
+            <li><i class="s-p"></i>Performance loss <span data-o="lossP"></span></li>
+            <li><i class="s-a"></i>Availability loss <span data-o="lossA"></span></li>
+          </ul>
+        </figure>
+
+        <ul class="findings" data-o="notes"></ul>
+
+        <dl class="tool-stats">
+          <div><dt>Planned production time</dt><dd data-o="planned"></dd></div>
+          <div><dt>Run time</dt><dd data-o="run"></dd></div>
+          <div><dt>Good parts</dt><dd data-o="good"></dd></div>
+          <div><dt>Possible at ideal rate</dt><dd data-o="max"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block block-panel">
+  <div class="wrap grid">
+    <div class="section-head sticky">
+      <h2>How OEE is calculated</h2>
+      <p class="muted measure">OEE multiplies three ratios. Each one isolates a different kind of loss.</p>
+    </div>
+    <dl class="spec explain">
+      <div><dt>Availability</dt><dd>Run time divided by planned production time. Planned time is the shift minus planned breaks; run time is planned time minus unplanned stops, setups and waiting.</dd></div>
+      <div><dt>Performance</dt><dd>Ideal cycle time multiplied by total parts, divided by run time. It captures slow cycles and short stops while the machine is nominally running.</dd></div>
+      <div><dt>Quality</dt><dd>Good parts divided by total parts. Scrap and rework both count as losses, because they used machine time.</dd></div>
+      <div><dt>OEE</dt><dd>Availability × performance × quality, which equals good parts multiplied by ideal cycle time, divided by planned production time.</dd></div>
+      <div><dt>Where to use it</dt><dd>On the constraint first. Raising OEE on a machine with spare capacity doesn't increase the shop's output. See <a href="/insights/find-the-bottleneck.html">how to find the real bottleneck</a>.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block no-print">
+  <div class="wrap grid">
+    <div class="section-head"><h2>Low OEE, and not sure why?</h2></div>
+    <div class="section-body">
+      <p class="lead">A bottleneck analysis measures where the time really goes at your constraint, and sets out the cheapest ways to win it back before you spend on capacity.</p>
+      <div class="actions tool-cta">
+        <a class="btn btn-primary" href="/services.html#bottleneck">See bottleneck analysis</a>
+        <a class="text-link" href="/tools/">More free tools</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebApplication", "name": "OEE calculator", "url": "https://acmss.ca/tools/oee-calculator.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+      "description": "Calculates availability, performance, quality and overall equipment effectiveness from one shift of data, in the browser.",
+      "provider": { "@id": "https://acmss.ca/#org" } },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acmss.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Free tools", "item": "https://acmss.ca/tools/" },
+      { "@type": "ListItem", "position": 3, "name": "OEE calculator", "item": "https://acmss.ca/tools/oee-calculator.html" } ] }
+  ]
+}
+</script>
+<script src="/assets/tools/oee.js?v=1" defer></script>
